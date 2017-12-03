@@ -23,6 +23,10 @@
 *.old
 *.pending
 
+# db files #
+*.sqlite
+*.db
+
 # Root Files #
 banned-ips.json
 banned-players.json
@@ -59,17 +63,12 @@ plugins/*
 !plugins/Multiverse-Portals/
 !plugins/Multiverse-SignPortals/
 
-!plugins/dynmap/*.txt
+!plugins/dynmap/worlds.txt
 
 !plugins/TerrainControl/TerrainControl.ini
 !plugins/TerrainControl/GlobalBiomes
 !plugins/TerrainControl/GlobalObjects
-!plugins/TerrainControl/worlds/test/
-!plugins/TerrainControl/worlds/worldforest/
-!plugins/TerrainControl/worlds/worldocean/
-!plugins/TerrainControl/worlds/worldore/
-!plugins/TerrainControl/worlds/worldruin/
-!plugins/TerrainControl/worlds/worldtest/
-!plugins/TerrainControl/worlds/worldtt/
 
-
+!plugins/WorldBorder/
+!plugins/WorldEdit/
+!plugins/WorldGuard/
