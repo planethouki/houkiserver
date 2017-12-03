@@ -21,6 +21,7 @@
 # Root Files #
 banned-ips.json
 banned-players.json
+ops.json
 usercache.json
 whitelist.json
 
@@ -46,4 +47,5 @@ temp/
 timings/
 
 # Plugin Folder #
-plugins/
+plugins/*
+!plugins/Multiverse-Core/
