@@ -1,0 +1,10 @@
+sudo mount -t nfs 192.168.11.76:/var/www/html/minecraft /var/www/html/minecraft
+sudo mount -t nfs 192.168.11.76:/var/minecraft/backup /var/minecraft/backup
+sudo mount -t tmpfs -o size=4g tmpfs /var/minecraft/spigot
+sudo /usr/local/bin/noip2
+sudo chown minecraft:minecraft /var/minecraft/spigot
+sudo chmod 755 /var/minecraft/spigot
+
+/opt/sos-berlin.com/jobscheduler_agent/bin/jobscheduler_agent.sh start
+cp -rp /var/minecraft/rsync/daily99/* /var/minecraft/spigot/
+
