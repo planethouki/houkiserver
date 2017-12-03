@@ -18,6 +18,11 @@
 *.tar.gz
 *.rar
 
+# temp files #
+*.log.lck
+*.old
+*.pending
+
 # Root Files #
 banned-ips.json
 banned-players.json
@@ -48,4 +53,14 @@ timings/
 
 # Plugin Folder #
 plugins/*
+
 !plugins/Multiverse-Core/
+!plugins/Multiverse-NetherPortals/
+!plugins/Multiverse-Portals/
+!plugins/Multiverse-SignPortals/
+
+!plugins/dynmap/*.txt
+
+plugins/TerrainControl/worlds/worldti/*
+plugins/TerrainControl/worlds/worldbb/*
+!plugins/TerrainControl/
