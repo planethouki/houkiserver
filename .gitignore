@@ -64,3 +64,4 @@ plugins/*
 plugins/TerrainControl/worlds/worldti/*
 plugins/TerrainControl/worlds/worldbb/*
 !plugins/TerrainControl/
+!plugins/TerrainControl/worlds/*
