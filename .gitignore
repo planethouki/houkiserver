@@ -66,8 +66,8 @@
 !/plugins/dynmap/worlds.txt
 
 !/plugins/TerrainControl/TerrainControl.ini
-!/plugins/TerrainControl/GlobalBiomes
-!/plugins/TerrainControl/GlobalObjects
+!/plugins/TerrainControl/GlobalBiomes/
+!/plugins/TerrainControl/GlobalObjects/
 
 !/plugins/WorldBorder/
 !/plugins/WorldEdit/
