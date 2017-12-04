@@ -2,7 +2,7 @@
 
 USERNAME='minecraft'
 SPI_PATH='/var/minecraft/spigot'
-DISK_PATH='/var/minecraft/rsync'
+DISK_PATH='/var/minecraft/backup/rsync'
 HOUR=`date +%H`
 
 ME=`whoami`

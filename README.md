@@ -2,7 +2,7 @@
 
 A minecraft server.
 
-# Environment
+## Environment
 
 * CentOS 7
 * Using Spigot
