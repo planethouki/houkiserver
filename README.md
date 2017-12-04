@@ -2,6 +2,15 @@
 
 A minecraft server.
 
+# Environment
+
+* CentOS 7
+* Using Spigot
+* Directory `/var/minecraft/spigot`
+* BackupDir `/var/minecraft/backup`
+* DynmapDir `/var/www/html/minecraft/dynmap`
+* Run User `minecraft`
+
 ## WebSite
 
 https://planethouki.ddns.net/
