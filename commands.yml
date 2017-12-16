@@ -45,5 +45,3 @@ aliases:
   - pex user $$1 group add treefeller *  300
   bps:
   - backpacks:bp $1 $2 $3
-  bl:
-  - blockparticle $1 $2 $3
