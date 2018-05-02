@@ -1,26 +1,22 @@
 #!/bin/bash
 
-USERNAME='minecraft'
-SERVICE='mega-cmd'
-SCNAME='mega'
-MEGA_PATH='/backup'
-BACKUP_PATH='/var/minecraft/backup'
-DATE=`date +%Y%m%d`
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+source ${SCRIPT_DIR}/spi_var.sh
 
-cd $BACKUP_PATH
+cd $MEGA_BACKUP_PATH
 
 ME=`whoami`
 
 if [ $ME == $USERNAME ] ; then
-  if pgrep -u $USERNAME -f $SERVICE > /dev/null ; then
-    echo "$SERVICE is already running. Check dupulication"
+  if pgrep -u $USERNAME -f $MEGA_SERVICE > /dev/null ; then
+    echo "$MEGA_SERVICE is already running. Check dupulication"
     exit 1
   else
-    screen -AmdS $SCNAME $SERVICE
+    screen -AmdS $MEGA_SCNAME $MEGA_SERVICE
     echo "sleep 1 miniute for mega startup"
     sleep 1m
     echo "upload now..."
-    mega-put $BACKUP_PATH/$DATE $MEGA_PATH
+    mega-put $MEGA_BACKUP_PATH/$DATE $MEGA_PATH
     mega-quit
   fi
 else

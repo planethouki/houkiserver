@@ -9,11 +9,4 @@
 #
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
-regions:
-    __global__:
-        members: {}
-        flags: {other-explosion: deny, creeper-explosion: deny,
-            passthrough: deny}
-        owners: {}
-        type: global
-        priority: 0
+regions: {}

@@ -1,9 +1,7 @@
 #!/bin/bash
 
-USERNAME='minecraft'
-SPI_PATH='/var/minecraft/spigot'
-DISK_PATH='/var/minecraft/backup/rsync'
-HOUR=`date +%H`
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+source ${SCRIPT_DIR}/spi_var.sh
 
 ME=`whoami`
 
@@ -17,9 +15,8 @@ if [ $ME == $USERNAME ] ; then
     FOLDER_NUM=99
   fi 
   
-  rsync -ahv --delete ${SPI_PATH}/ ${DISK_PATH}/daily${FOLDER_NUM}/
+  rsync -ahv --delete ${SPI_PATH}/ ${SPI_RSYNC}/daily${FOLDER_NUM}/
 else
   echo "Please run the minecraft user."
   exit 1
 fi
-

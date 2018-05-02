@@ -2,11 +2,8 @@ bounceback: false
 worlds:
   worldruin:
     portalgoesto:
-      NETHER: worldruin_nether
       END: worldruin_the_end
   worldti:
-    portalgoesto:
-      NETHER: worldore
+    portalgoesto: {}
   worldore:
-    portalgoesto:
-      NETHER: worldti
+    portalgoesto: {}

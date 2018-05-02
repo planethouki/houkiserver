@@ -15,6 +15,8 @@ unrestricted-advancements: false
 aliases:
   icanhasbukkit:
   - version $1-
+  renraku:
+  - mv tp worldhub
   shigen:
   - mv tp worldore
   bouken:
@@ -33,8 +35,6 @@ aliases:
   - mv tp worldocean
   mori:
   - mv tp worldforest
-  iseki:
-  - mv tp worldruin
   bed:
   - kiss-home:home
   spawn:

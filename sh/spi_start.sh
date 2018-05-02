@@ -1,16 +1,11 @@
 #!/bin/bash
 
-USERNAME='minecraft'
-SERVICE='spigot-1.12.2.jar'
-SCNAME='spigot'
-SPI_PATH='/var/minecraft/spigot'
- 
-XMX="3G"
-XMS="3G"
- 
-cd $SPI_PATH
- 
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+source ${SCRIPT_DIR}/spi_var.sh
+
 ME=`whoami`
+
+cd ${SPI_PATH}
  
 if [ $ME == $USERNAME ] ; then
   if pgrep -u $USERNAME -f $SERVICE > /dev/null

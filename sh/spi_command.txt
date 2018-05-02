@@ -1,24 +1,18 @@
 mount -t nfs 192.168.11.76:/var/www/html/minecraft /var/www/html/minecraft
 mount -t nfs 192.168.11.76:/var/minecraft/backup /var/minecraft/backup
 
-/usr/local/bin/noip2
 
-mount -t tmpfs -o size=4g tmpfs /var/minecraft/spigot
-chown minecraft:minecraft /var/minecraft/spigot
-chmod 755 /var/minecraft/spigot
-
-/opt/sos-berlin.com/jobscheduler_agent/bin/jobscheduler_agent.sh start
-cp -rp /var/minecraft/rsync/daily99/* /var/minecraft/spigot/
+cp -rp /var/minecraft/rsync/daily99/* /home/minecraft/spigot/
 
 
 
-mount -t tmpfs -o size=1500m tmpfs /var/minecraft/spigot/worldti
-chown minecraft:minecraft /var/minecraft/spigot/worldti
-chmod 775 /var/minecraft/spigot/worldti
+mount -t tmpfs -o size=1500m tmpfs /home/minecraft/spigot/worldti
+chown minecraft:minecraft /home/minecraft/spigot/worldti
+chmod 775 /home/minecraft/spigot/worldti
 
 
-mount -t tmpfs -o size=1500m tmpfs /var/minecraft/spigot/worldbb
-chown minecraft:minecraft /var/minecraft/spigot/worldbb
-chmod 775 /var/minecraft/spigot/worldbb
+mount -t tmpfs -o size=1500m tmpfs /home/minecraft/spigot/worldbb
+chown minecraft:minecraft /home/minecraft/spigot/worldbb
+chmod 775 /home/minecraft/spigot/worldbb
 
 

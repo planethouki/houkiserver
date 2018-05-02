@@ -12,8 +12,17 @@
 regions:
     __global__:
         members: {}
-        flags: {other-explosion: deny, creeper-explosion: deny,
-            passthrough: deny}
+        flags: {entry: deny}
         owners: {}
         type: global
         priority: 0
+    lobby:
+        min: {x: -207.5, y: 0.0, z: 7.5}
+        max: {x: -107.5, y: 255.0, z: 107.5}
+        members: {}
+        flags: {other-explosion: deny, creeper-explosion: deny, mob-damage: deny,
+            passthrough: deny, pvp: deny, exit: deny, entry: allow}
+        owners: {}
+        type: cuboid
+        priority: 1000
+
