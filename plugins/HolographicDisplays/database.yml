@@ -1,0 +1,38 @@
+test:
+  location: worldti, -252.458, 66.200, 22.481
+  lines:
+  - '&u ようこそほうきサーバーへ！'
+guit:
+  location: worldti, -260.552, 65.263, 22.670
+  lines:
+  - '&u ほうきサーバーについてコマンド/menu 入力してください'
+spo:
+  location: worldti, -189.405, 67.200, 22.578
+  lines:
+  - '&b ようこそ！ほうきサーバーへ！'
+rule:
+  location: worldti, -189.493, 52.200, 22.480
+  lines:
+  - ここを初期スポーン場所にして、規約などを確認させます。
+  - コマンドブロックを駆使し、全項目を確認させた後、プレイさせます。
+shigen2renraku:
+  location: worldore, -7.483, 81.200, 5.386
+  lines:
+  - renrakuへ
+world2renraku:
+  location: world, -474.489, 81.200, 687.072
+  lines:
+  - ようこそほうき鯖へ
+  - まずはこのポータルへ
+bouken:
+  location: worldhub, -178.556, 68.000, 57.505
+  lines:
+  - 冒険ワールド
+shigen:
+  location: worldhub, -136.288, 69.200, 57.484
+  lines:
+  - 資源ワールド
+kaitaku:
+  location: worldhub, -157.703, 69.200, 36.083
+  lines:
+  - 開拓ワールド

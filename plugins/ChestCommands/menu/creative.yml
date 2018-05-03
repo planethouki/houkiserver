@@ -1,0 +1,80 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&1HoukiServer creative menu'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 1
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: 'gmcmenu'
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 5
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: ''
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item:
+    id: wool:1
+    left-click: false
+    right-click: false
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+gm0:
+  COMMAND: 'op: gamemode 0'
+  NAME: '&eサバイバルモード'
+  ID: 267
+  POSITION-X: 1
+  POSITION-Y: 1
+
+gm1:
+  COMMAND: 'op: gamemode 1'
+  NAME: '&eクリエイティブモード'
+  ID: 57
+  POSITION-X: 2
+  POSITION-Y: 1
+
+
+we1:
+  COMMAND: 'console: pex user {player} add worldedit.*'
+  NAME: '&eWorldEdit開始'
+  ID: 271
+  POSITION-X: 5
+  POSITION-Y: 1
+
+we2:
+  COMMAND: 'console: pex user {player} remove worldedit.*'
+  NAME: '&eWorldEdit終了'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 1
+
+
+
+
+menu-close-no-commands-no-lore:
+  NAME: '&6Close the menu'
+  ID: redstone lamp
+  LORE:
+    - 'the GUI will just close.'
+  POSITION-X: 9
+  POSITION-Y: 1

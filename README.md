@@ -6,7 +6,7 @@ A minecraft server.
 
 * CentOS 7
 * Using Spigot
-* Directory `/var/minecraft/spigot`
+* Directory `/home/minecraft/spigot`
 * BackupDir `/var/minecraft/backup`
 * DynmapDir `/var/www/html/minecraft/dynmap`
 * Run User `minecraft`
