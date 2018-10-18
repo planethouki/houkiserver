@@ -38,7 +38,7 @@ regions:
     high-frequency-flags: true
     protect-against-liquid-flow: false
     wand: 334
-    max-claim-volume: 30000
+    max-claim-volume: 65536
     claim-only-inside-existing-regions: false
     location-flags-only-inside-regions: false
     max-region-count-per-player:

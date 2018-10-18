@@ -51,6 +51,7 @@
 /worldti_the_end/
 /worldtt/
 /worldhub/
+/worldaq/
 
 # Other Folder #
 /crash-reports/
@@ -82,7 +83,7 @@
 !/plugins/WorldGuard/
 
 !/plugins/Vault/
-!/plugins/Votifier/
+!/plugins/Votifier/config.yml
 !/plugins/SimpleVoteListener/
 
 !/plugins/SimpleHomes/config.yml

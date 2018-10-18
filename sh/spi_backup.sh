@@ -6,10 +6,10 @@ source ${SCRIPT_DIR}/spi_var.sh
 ME=`whoami`
 
 if [ $ME == $USERNAME ] ; then
-  echo "backup now..."
+  echo "backup start"
   mkdir -p $BACKUP_PATH
   cp -r $SPI_BACKUP $BACKUP_PATH
 else
-  echo "Please run the minecraft user."
+  echo "User is not proper"
   exit 1
 fi

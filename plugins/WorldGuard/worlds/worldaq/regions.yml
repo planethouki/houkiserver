@@ -10,9 +10,9 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
-    shigen_spawn:
-        min: {x: -16.0, y: 0.0, z: 30.0}
-        max: {x: 0.0, y: 255.0, z: 47.0}
+    worldaq_spawn:
+        min: {x: 62.0, y: 68.0, z: -68.0}
+        max: {x: 68.0, y: 255.0, z: -62.0}
         members: {}
         flags: {block-break: deny, block-place: deny}
         owners: {}

@@ -80,47 +80,19 @@ boukencmd:
   POSITION-Y: 2
 
 shigencmd:
-  COMMAND: 'shigen'
-  NAME: '&dshigenワールドへ行く'
+  COMMAND: 'mvtp worldaq'
+  NAME: '&d1.13ワールドへ行く'
   LORE:
-    -  '/shigenコマンドでもいけます'
+    -  ''
   ID: '351:14'
   POSITION-X: 4
-  POSITION-Y: 2
-
-kairocmd:
-  COMMAND: 'kairo'
-  NAME: '&ckairoワールドへ行く'
-  LORE:
-    -  '/kairoコマンドでもいけます'
-  ID: '351:5'
-  POSITION-X: 5
-  POSITION-Y: 2
-
-umicmd:
-  COMMAND: 'umi'
-  NAME: '&cumiワールドへ行く'
-  LORE:
-    -  '/umiコマンドでもいけます'
-  ID: '351:7'
-  POSITION-X: 6
-  POSITION-Y: 2
-
-moricmd:
-  COMMAND: 'mori'
-  NAME: '&cmoriワールドへ行く'
-  LORE:
-    -  '/moriコマンドでもいけます'
-  ID: '351:9'
-  POSITION-X: 7
   POSITION-Y: 2
 
 
 ruleinfo:
   NAME: '&aサーバールール'
   LORE:
-    - '1.迷惑行為をしてはならない'
-    - '以上'
+    - '迷惑行為をしてはならない'
   ID: paper
   KEEP-OPEN: true
   POSITION-X: 1
@@ -136,28 +108,11 @@ worldinfo1:
     - '&6bouken'
     - '上級者ワールド。生活用。'
     - '慣れた人向けの、難しい設定。'
-    - '&dshigen'
-    - '資源ワールド。鉱石がかなり多めになっている。'
-    - '定期的にリセット。'
+    - '&d1.13'
+    - '1.13ワールド'
   ID: paper
   KEEP-OPEN: true
   POSITION-X: 2
-  POSITION-Y: 3
-
-
-worldinfo2:
-  NAME: '&aワールドについて２'
-  LORE:
-    - '&ckairo'
-    - 'トラップタワー＆RS回路用ワールド。'
-    - '洞窟がなくて湧きつぶしがかんたん。'
-    - '&cumi'
-    - '広大な海。たくさんの海底遺跡。'
-    - '&cmori'
-    - '広大な森。たくさんの洋館。'
-  ID: paper
-  KEEP-OPEN: true
-  POSITION-X: 3
   POSITION-Y: 3
 
 
@@ -220,7 +175,7 @@ voteinfo:
   NAME: '&a投票'
   LORE:
     - 'Japan Minecraft Serversで'
-    - 'ほうき鯖に投票すると、ダイヤをプレゼント。'
+    - 'ほうき鯖に投票すると、プレゼントがあるよ。'
     - 'https://minecraft.jp/servers/planethouki.ddns.net'
     - 'ただし、前もってログインしてね。'
   ID: paper
@@ -271,8 +226,6 @@ backpackinfo:
 otherinfo:
   NAME: '&aその他'
   LORE:
-    - '&3階段かハーフブロックを'
-    - '&3手ぶらでクリックすると座れます。'
     - '&a40%以上の人が寝れば(ワールドごと)'
     - '&a朝になります。'
   ID: paper

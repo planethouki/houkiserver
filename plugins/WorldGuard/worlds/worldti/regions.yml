@@ -16,7 +16,7 @@ regions:
         members:
             groups: [citizen, people, default]
         flags: {other-explosion: deny, water-flow: deny, enderman-grief: deny, pvp: deny,
-            block-place: deny, mob-spawning: deny, fire-spread: deny, water-flow-group: NON_OWNERS,
+            mob-spawning: deny, block-place: deny, fire-spread: deny, water-flow-group: NON_OWNERS,
             creeper-explosion: deny, mob-damage: deny, block-break: deny, passthrough: allow,
             damage-animals: deny, block-place-group: NON_OWNERS, lava-flow: deny,
             tnt: deny, block-break-group: NON_OWNERS}
@@ -28,7 +28,7 @@ regions:
         members:
             groups: [citizen]
         flags: {other-explosion: deny, water-flow: deny, enderman-grief: deny, pvp: deny,
-            block-place: deny, mob-spawning: deny, fire-spread: deny, creeper-explosion: deny,
+            mob-spawning: deny, block-place: deny, fire-spread: deny, creeper-explosion: deny,
             mob-damage: deny, block-break: deny, passthrough: allow, block-place-group: NON_MEMBERS,
             lava-flow: deny, tnt: deny, block-break-group: NON_MEMBERS}
         owners: {}
@@ -38,8 +38,7 @@ regions:
         members:
             groups: [citizen, people, default]
         flags: {other-explosion: deny, creeper-explosion: deny, passthrough-group: NON_MEMBERS,
-            mob-damage: deny, passthrough: deny, tnt: deny,
-            lava-flow: deny, fire-spread: deny}
+            mob-damage: deny, passthrough: deny, tnt: deny, lava-flow: deny, fire-spread: deny}
         owners: {}
         type: global
         priority: 0

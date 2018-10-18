@@ -1,15 +1,4 @@
 portals:
-  portal_worldtt:
-    entryfee:
-      currency: -1
-      amount: 0.0
-    safeteleport: true
-    teleportnonplayers: false
-    handlerscript: ''
-    owner: planet_houki
-    location: 3.0,84.0,-3.0:6.0,87.0,-3.0
-    world: worldtt
-    destination: worldti
   renraku2kaitaku:
     entryfee:
       currency: -1
@@ -32,18 +21,7 @@ portals:
     location: -185.0,67.0,55.0:-185.0,71.0,59.0
     world: worldhub
     destination: worldbb
-  renraku2shigen:
-    entryfee:
-      currency: -1
-      amount: 0.0
-    safeteleport: true
-    teleportnonplayers: false
-    handlerscript: ''
-    owner: planet_houki
-    location: -131.0,67.0,55.0:-131.0,71.0,59.0
-    world: worldhub
-    destination: worldore
-  world2renraku:
+  world2tutoA:
     entryfee:
       currency: -1
       amount: 0.0
@@ -53,8 +31,8 @@ portals:
     owner: planet_houki
     location: -478.0,80.0,689.0:-472.0,85.0,689.0
     world: world
-    destination: worldhub
-  shigen2renraku:
+    destination: p:tutoA
+  bouken2renraku:
     entryfee:
       currency: -1
       amount: 0.0
@@ -62,8 +40,8 @@ portals:
     teleportnonplayers: false
     handlerscript: ''
     owner: planet_houki
-    location: -10.0,78.0,3.0:-6.0,78.0,7.0
-    world: worldore
+    location: -1.0,55.0,10.0:2.0,58.0,10.0
+    world: worldbb
     destination: worldhub
   kaitaku2renraku:
     entryfee:
@@ -73,6 +51,70 @@ portals:
     teleportnonplayers: false
     handlerscript: ''
     owner: planet_houki
-    location: -193.0,63.0,39.0:-187.0,63.0,45.0
+    location: -179.0,64.0,17.0:-175.0,68.0,17.0
     world: worldti
+    destination: worldhub
+  aq2renraku:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: planet_houki
+    location: 63.0,71.0,-65.0:67.0,75.0,-65.0
+    world: worldaq
+    destination: worldhub
+  renraku2aq:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: planet_houki
+    location: -160.0,67.0,84.0:-156.0,71.0,84.0
+    world: worldhub
+    destination: worldaq
+  tutoA:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: planet_houki
+    location: -167.0,29.0,55.0:-167.0,33.0,59.0
+    world: worldhub
+  tutoB:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: planet_houki
+    location: -167.0,36.0,55.0:-167.0,40.0,59.0
+    world: worldhub
+  tutoA2tutoB:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: planet_houki
+    location: -149.0,29.0,55.0:-149.0,33.0,59.0
+    world: worldhub
+    destination: p:tutoB
+  tutoB2renraku:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: planet_houki
+    location: -149.0,36.0,55.0:-149.0,40.0,59.0
+    world: worldhub
     destination: worldhub

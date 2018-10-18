@@ -1,52 +1,4 @@
 worlds:
-  worldforest:
-    ==: MVWorld
-    hidden: 'false'
-    alias: worldforest
-    color: WHITE
-    style: NORMAL
-    pvp: 'true'
-    scale: '1.0'
-    respawnWorld: ''
-    allowWeather: 'true'
-    difficulty: EASY
-    spawning:
-      ==: MVSpawnSettings
-      animals:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-      monsters:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-    entryfee:
-      ==: MVEntryFee
-      amount: '0.0'
-      currency: '-1'
-    hunger: 'true'
-    autoHeal: 'true'
-    adjustSpawn: 'true'
-    portalForm: ALL
-    gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
-    spawnLocation:
-      ==: MVSpawnLocation
-      x: 0.5
-      y: 68.0
-      z: 0.5
-      pitch: 0.0
-      yaw: -180.0
-    autoLoad: 'true'
-    bedRespawn: 'true'
-    worldBlacklist: []
-    environment: NORMAL
-    seed: '7059219015500781405'
-    generator: TerrainControl
-    playerLimit: '-1'
-    allowFlight: 'true'
   world_the_end:
     ==: MVWorld
     hidden: 'true'
@@ -57,7 +9,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: EASY
+    difficulty: NORMAL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -105,7 +57,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: EASY
+    difficulty: NORMAL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -153,7 +105,7 @@ worlds:
     scale: '8.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: EASY
+    difficulty: NORMAL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -201,7 +153,7 @@ worlds:
     scale: '8.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: EASY
+    difficulty: NORMAL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -236,64 +188,16 @@ worlds:
     worldBlacklist: []
     environment: NETHER
     seed: '-4766480092751804137'
-    generator: TerrainControl
+    generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  worldore:
+  worldaq:
     ==: MVWorld
     hidden: 'false'
-    alias: shigen
+    alias: worldaq
     color: WHITE
     style: NORMAL
-    pvp: 'true'
-    scale: '1.0'
-    respawnWorld: ''
-    allowWeather: 'true'
-    difficulty: PEACEFUL
-    spawning:
-      ==: MVSpawnSettings
-      animals:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-      monsters:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-    entryfee:
-      ==: MVEntryFee
-      amount: '10.0'
-      currency: '-1'
-    hunger: 'true'
-    autoHeal: 'true'
-    adjustSpawn: 'true'
-    portalForm: ALL
-    gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
-    spawnLocation:
-      ==: MVSpawnLocation
-      x: 0.5115800157434442
-      y: 79.0
-      z: 0.5
-      pitch: 0.0
-      yaw: 810.0
-    autoLoad: 'true'
-    bedRespawn: 'true'
-    worldBlacklist: []
-    environment: NORMAL
-    seed: '-1585703748124895148'
-    generator: TerrainControl
-    playerLimit: '-1'
-    allowFlight: 'true'
-  worldtt:
-    ==: MVWorld
-    hidden: 'false'
-    alias: traptower
-    color: WHITE
-    style: NORMAL
-    pvp: 'true'
+    pvp: 'false'
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
@@ -322,17 +226,17 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 0.38324263924908974
-      y: 83.0
-      z: 0.5
+      x: 60.0
+      y: 71.0
+      z: -59.0
       pitch: 0.0
       yaw: 0.0
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '-8104228977116842670'
-    generator: TerrainControl
+    seed: '-7066248835082109250'
+    generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
   worldbb:
@@ -380,55 +284,7 @@ worlds:
     worldBlacklist: []
     environment: NORMAL
     seed: '-2125174285208816551'
-    generator: TerrainControl
-    playerLimit: '-1'
-    allowFlight: 'true'
-  worldocean:
-    ==: MVWorld
-    hidden: 'false'
-    alias: umi
-    color: WHITE
-    style: NORMAL
-    pvp: 'true'
-    scale: '1.0'
-    respawnWorld: ''
-    allowWeather: 'true'
-    difficulty: NORMAL
-    spawning:
-      ==: MVSpawnSettings
-      animals:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-      monsters:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-    entryfee:
-      ==: MVEntryFee
-      amount: '0.0'
-      currency: '-1'
-    hunger: 'true'
-    autoHeal: 'true'
-    adjustSpawn: 'false'
-    portalForm: ALL
-    gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
-    spawnLocation:
-      ==: MVSpawnLocation
-      x: 0.5
-      y: 69.0
-      z: 0.5
-      pitch: 0.0
-      yaw: -180.0
-    autoLoad: 'true'
-    bedRespawn: 'true'
-    worldBlacklist: []
-    environment: NORMAL
-    seed: '7963019150858863383'
-    generator: TerrainControl
+    generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
   worldhub:
@@ -441,7 +297,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'false'
-    difficulty: EASY
+    difficulty: NORMAL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -470,22 +326,22 @@ worlds:
       y: 67.0
       z: 57.5
       pitch: 0.0
-      yaw: -180.0
+      yaw: 0.0
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
     seed: '5995784047210373181'
-    generator: TerrainControl
+    generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
   worldti_the_end:
     ==: MVWorld
     hidden: 'false'
-    alias: kaitaku_the_end
+    alias: ''
     color: WHITE
     style: NORMAL
-    pvp: 'true'
+    pvp: 'false'
     scale: '16.0'
     respawnWorld: ''
     allowWeather: 'true'
@@ -515,7 +371,7 @@ worlds:
     spawnLocation:
       ==: MVSpawnLocation
       x: 0.0
-      y: 63.0
+      y: 73.0
       z: 0.0
       pitch: 0.0
       yaw: 0.0
@@ -523,7 +379,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: THE_END
-    seed: '-4207229189850868925'
+    seed: '-6739063429448633840'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
@@ -537,7 +393,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: EASY
+    difficulty: NORMAL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -572,6 +428,6 @@ worlds:
     worldBlacklist: []
     environment: NORMAL
     seed: '-4048535146223553126'
-    generator: TerrainControl
+    generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'

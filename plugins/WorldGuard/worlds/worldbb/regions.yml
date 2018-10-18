@@ -16,9 +16,9 @@ regions:
         members:
             groups: [citizen, people]
         flags: {water-flow: deny, enderman-grief: deny, pvp: deny, block-place: allow,
-            mob-spawning: deny, fire-spread: deny, water-flow-group: NON_OWNERS, mob-damage: deny,
-            block-break: allow, passthrough: allow, damage-animals: deny, tnt: deny,
-            lava-flow: deny}
+            mob-spawning: deny, fire-spread: deny, water-flow-group: NON_OWNERS, passthrough-group: NON_MEMBERS,
+            mob-damage: deny, passthrough: deny, damage-animals: deny,
+            tnt: deny, lava-flow: deny}
         owners:
             groups: [citizen]
         type: cuboid
@@ -26,8 +26,7 @@ regions:
     __global__:
         members:
             groups: [citizen, people]
-        flags: {other-explosion: deny, creeper-explosion: deny, passthrough-group: NON_MEMBERS,
-            passthrough: deny, tnt: deny, lava-flow: deny, fire-spread: deny}
+        flags: {passthrough-group: NON_MEMBERS, passthrough: deny}
         owners: {}
         type: global
         priority: 0

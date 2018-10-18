@@ -92,37 +92,6 @@ roleinfo3:
   POSITION-X: 2
   POSITION-Y: 2
 
-backpackinfo2:
-  NAME: '&aバックパック２'
-  LORE:
-    - 'もうひとつのバックパック'
-    - 'バグあり。エンチャ付きは入れたらだめ。'
-    - '有料です。お金を払うほど容量が増えます。'
-    - '&3/bps create <name> &r作る'
-    - '&3/bps open <name> &r開く'
-    - '&3/bps upgrade <name> &r容量を増やす'
-    - '&3/bps prices &r値段を見る'
-    - '&3/bps <name> &r情報を見る'
-    - '&3/bps delete <name> &r消す'
-  ID: paper
-  KEEP-OPEN: true
-  POSITION-X: 3
-  POSITION-Y: 2
-
-
-
-
-menu-creative:
-  NAME: '&6Creativeメニュー'
-  COMMAND: 'open: creative.yml'
-  ID: 322
-  LORE:
-    - 'creative用のメニュー'
-    - '/gmcmenuでも開けます'
-  VIEW-PERMISSION: 'chestcommands.open.creative.yml'
-  POSITION-X: 7
-  POSITION-Y: 1
-
 
 
 menu:
