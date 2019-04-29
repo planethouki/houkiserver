@@ -6,7 +6,7 @@ DATE=`date +%Y%m%d`
 HOUR=`date +%H`
 
 USERNAME='minecraft'
-SERVICE='spigot-1.13.1.jar'
+SERVICE='spigot-1.13.2.jar'
 SCNAME='spigot'
 
 SPI_PATH='/home/minecraft/spigot' 
