@@ -44,7 +44,7 @@ export default class ServerQuery extends React.Component {
         } else {
             return (
                 <ul>
-                    <li>アドレス・・・planethouki.ddns.net</li>
+                    <li>アドレス・・・houkiserver.com</li>
                     <li>バージョン・・・<span id="version">{data.version.name}</span></li>
                     <li>ユーザー・・・<span id="login-players">{data.players.online}</span>／<span id="max-players">{data.players.max}</span></li>
                 </ul>
