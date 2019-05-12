@@ -15,7 +15,7 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
-const DYNMAP_URL = "https://houkiserver.z31.web.core.windows.net/dynmap/";
+const DYNMAP_URL = "https://houkiserver.z11.web.core.windows.net/dynmap/";
 
 const theme = createMuiTheme({
     typography: {
