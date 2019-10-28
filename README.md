@@ -6,15 +6,11 @@ A minecraft server.
 
 * CentOS 7
 * Using Spigot
-* Directory `/home/minecraft/spigot`
-* BackupDir `/var/minecraft/backup`
-* DynmapDir `/var/www/html/minecraft/dynmap`
-* Run User `minecraft`
 
 ## WebSite
 
-https://planethouki.ddns.net/
+https://planethouki.github.io/houkiserver/
 
 ## Japan Minecraft Servers
 
-<a href="https://minecraft.jp/servers/planethouki.ddns.net"><img src="https://minecraft.jp/servers/planethouki.ddns.net/banner/1/560x95.png"/></a>
+<a href="https://minecraft.jp/servers/houkiserver.com"><img src="https://minecraft.jp/servers/houkiserver.com/banner/1/560x95.png"/></a>
