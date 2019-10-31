@@ -15,10 +15,6 @@ rule:
   lines:
   - ここを初期スポーン場所にして、規約などを確認させます。
   - コマンドブロックを駆使し、全項目を確認させた後、プレイさせます。
-shigen2renraku:
-  location: worldore, -7.483, 81.200, 5.386
-  lines:
-  - renrakuへ
 world2renraku:
   location: world, -474.489, 81.200, 687.072
   lines:
@@ -28,11 +24,15 @@ bouken:
   location: worldhub, -178.556, 68.000, 57.505
   lines:
   - 冒険ワールド
-shigen:
+umibe:
   location: worldhub, -136.288, 69.200, 57.484
   lines:
-  - 資源ワールド
+  - 山岳ワールド
 kaitaku:
   location: worldhub, -157.703, 69.200, 36.083
   lines:
   - 開拓ワールド
+touge:
+  location: worldhub, -157.000, 69.200, 78.000
+  lines:
+  - 海辺ワールド

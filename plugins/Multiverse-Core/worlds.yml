@@ -9,7 +9,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: NORMAL
+    difficulty: PEACEFUL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -25,12 +25,11 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'false'
     portalForm: ALL
-    gameMode: SURVIVAL
+    gameMode: ADVENTURE
     keepSpawnInMemory: 'false'
     spawnLocation:
       ==: MVSpawnLocation
@@ -73,7 +72,6 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'true'
@@ -121,7 +119,6 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'true'
@@ -153,7 +150,7 @@ worlds:
     scale: '8.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: NORMAL
+    difficulty: EASY
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -169,7 +166,6 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'true'
@@ -217,7 +213,6 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'true'
@@ -242,7 +237,7 @@ worlds:
   worldaq:
     ==: MVWorld
     hidden: 'false'
-    alias: worldaq
+    alias: umibe
     color: WHITE
     style: NORMAL
     pvp: 'false'
@@ -265,7 +260,6 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'true'
@@ -297,7 +291,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'false'
-    difficulty: NORMAL
+    difficulty: PEACEFUL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -313,12 +307,11 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'true'
     portalForm: ALL
-    gameMode: SURVIVAL
+    gameMode: ADVENTURE
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
@@ -335,10 +328,10 @@ worlds:
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  worldti:
+  worldvi:
     ==: MVWorld
     hidden: 'false'
-    alias: kaitaku
+    alias: touge
     color: WHITE
     style: NORMAL
     pvp: 'false'
@@ -361,7 +354,53 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
+    hunger: 'true'
+    autoHeal: 'true'
+    adjustSpawn: 'true'
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: 'true'
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 0.0
+      y: 63.0
+      z: 0.0
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: 'true'
+    bedRespawn: 'true'
+    worldBlacklist: []
+    environment: NORMAL
+    seed: '8187476831440376700'
+    generator: 'null'
+    playerLimit: '-1'
+    allowFlight: 'true'
+  worldti:
+    ==: MVWorld
+    hidden: 'false'
+    alias: kaitaku
+    color: WHITE
+    style: NORMAL
+    pvp: 'false'
+    scale: '1.0'
+    respawnWorld: ''
+    allowWeather: 'true'
+    difficulty: EASY
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: '0.0'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'true'

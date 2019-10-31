@@ -30,3 +30,4 @@ time:
 update-notification: true
 debug: false
 precise-hologram-movement: true
+quick-edit-commands: true

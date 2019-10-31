@@ -10,35 +10,15 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
-    lobby:
+    spawn:
         min: {x: -222.0, y: 0.0, z: -10.0}
         max: {x: -159.0, y: 255.0, z: 53.0}
-        members:
-            groups: [citizen, people, default]
+        members: {}
         flags: {other-explosion: deny, water-flow: deny, enderman-grief: deny, pvp: deny,
             mob-spawning: deny, block-place: deny, fire-spread: deny, water-flow-group: NON_OWNERS,
             creeper-explosion: deny, mob-damage: deny, block-break: deny, passthrough: allow,
             damage-animals: deny, block-place-group: NON_OWNERS, lava-flow: deny,
             tnt: deny, block-break-group: NON_OWNERS}
-        owners:
-            groups: [citizen]
+        owners: {}
         type: cuboid
         priority: 1000
-    citizen_template:
-        members:
-            groups: [citizen]
-        flags: {other-explosion: deny, water-flow: deny, enderman-grief: deny, pvp: deny,
-            mob-spawning: deny, block-place: deny, fire-spread: deny, creeper-explosion: deny,
-            mob-damage: deny, block-break: deny, passthrough: allow, block-place-group: NON_MEMBERS,
-            lava-flow: deny, tnt: deny, block-break-group: NON_MEMBERS}
-        owners: {}
-        type: global
-        priority: 1000
-    __global__:
-        members:
-            groups: [citizen, people, default]
-        flags: {other-explosion: deny, creeper-explosion: deny, passthrough-group: NON_MEMBERS,
-            mob-damage: deny, passthrough: deny, tnt: deny, lava-flow: deny, fire-spread: deny}
-        owners: {}
-        type: global
-        priority: 0

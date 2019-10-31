@@ -10,23 +10,11 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
-    lobby:
-        min: {x: -32.0, y: 0.0, z: -32.0}
-        max: {x: 32.0, y: 255.0, z: 32.0}
-        members:
-            groups: [citizen, people]
-        flags: {water-flow: deny, enderman-grief: deny, pvp: deny, block-place: allow,
-            mob-spawning: deny, fire-spread: deny, water-flow-group: NON_OWNERS, passthrough-group: NON_MEMBERS,
-            mob-damage: deny, passthrough: deny, damage-animals: deny,
-            tnt: deny, lava-flow: deny}
-        owners:
-            groups: [citizen]
+    spawn:
+        min: {x: -12.0, y: 0.0, z: -12.0}
+        max: {x: 12.0, y: 255.0, z: 12.0}
+        members: {}
+        flags: {passthrough: allow, block-break: deny, block-place: deny}
+        owners: {}
         type: cuboid
         priority: 1000
-    __global__:
-        members:
-            groups: [citizen, people]
-        flags: {passthrough-group: NON_MEMBERS, passthrough: deny}
-        owners: {}
-        type: global
-        priority: 0

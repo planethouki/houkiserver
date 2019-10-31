@@ -17,8 +17,8 @@ aliases:
   - version $1-
   renraku:
   - mv tp worldhub
-  shigen:
-  - mv tp worldore
+  umibe:
+  - mv tp worldaq
   bouken:
   - mv tp worldbb
   kaitaku:
@@ -29,8 +29,4 @@ aliases:
   - kiss-home:home
   home:
   - simplehomes:home $1
-  kikori:
-  - pex user $$1 group add treefeller *  300
-  bps:
-  - backpacks:bp $1 $2 $3
 unrestricted-advancements: false

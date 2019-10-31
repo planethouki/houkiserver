@@ -1,7 +1,6 @@
 portals:
   renraku2kaitaku:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -12,7 +11,6 @@ portals:
     destination: worldti
   renraku2bouken:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -23,7 +21,6 @@ portals:
     destination: worldbb
   world2tutoA:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -34,7 +31,6 @@ portals:
     destination: p:tutoA
   bouken2renraku:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -45,7 +41,6 @@ portals:
     destination: worldhub
   kaitaku2renraku:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -54,9 +49,8 @@ portals:
     location: -179.0,64.0,17.0:-175.0,68.0,17.0
     world: worldti
     destination: worldhub
-  aq2renraku:
+  umibe2renraku:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -65,9 +59,8 @@ portals:
     location: 63.0,71.0,-65.0:67.0,75.0,-65.0
     world: worldaq
     destination: worldhub
-  renraku2aq:
+  renraku2umibe:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -78,7 +71,6 @@ portals:
     destination: worldaq
   tutoA:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -88,7 +80,6 @@ portals:
     world: worldhub
   tutoB:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -98,7 +89,6 @@ portals:
     world: worldhub
   tutoA2tutoB:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -109,7 +99,6 @@ portals:
     destination: p:tutoB
   tutoB2renraku:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -117,4 +106,24 @@ portals:
     owner: planet_houki
     location: -149.0,36.0,55.0:-149.0,40.0,59.0
     world: worldhub
+    destination: worldhub
+  renraku2touge:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: planet_houki
+    location: -131.0,67.0,55.0:-131.0,71.0,59.0
+    world: worldhub
+    destination: worldvi
+  touge2renraku:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: planet_houki
+    location: -1.0,63.0,-3.0:3.0,67.0,-3.0
+    world: worldvi
     destination: worldhub

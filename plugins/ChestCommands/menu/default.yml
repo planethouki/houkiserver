@@ -28,7 +28,7 @@ menu-settings:
   # open-with-item - OPTIONAL
   # The menu will open only right-clicking with orange wool [35:1]
   open-with-item:
-    id: wool:1
+    id: white wool
     left-click: false
     right-click: false
 
@@ -45,7 +45,7 @@ bedcmd:
   NAME: '&e自分のベッドへ行く'
   LORE:
     - '/bed, /spawnコマンドでもいけます'
-  ID: bed
+  ID: red bed
   POSITION-X: 1
   POSITION-Y: 1
 
@@ -57,7 +57,7 @@ homecmd:
     - '/sethomeコマンドでホームを設定します'
     - '&3people&f以上の人が使えます'
     - '&2&lcitizen&fは名前付きホームが作れます'
-  ID: 'bed:1'
+  ID: white bed
   POSITION-X: 2
   POSITION-Y: 1
 
@@ -66,7 +66,7 @@ kaitakucmd:
   NAME: '&2kaitakuワールドへ行く'
   LORE:
     - '/kaitakuコマンドでもいけます'
-  ID: '351:2'
+  ID: red dye
   POSITION-X: 1
   POSITION-Y: 2
 
@@ -75,7 +75,7 @@ boukencmd:
   NAME: '&6boukenワールドへ行く'
   LORE:
     -  '/boukenコマンドでもいけます'
-  ID: '351:1'
+  ID: green dye
   POSITION-X: 2
   POSITION-Y: 2
 
@@ -84,7 +84,7 @@ shigencmd:
   NAME: '&d1.13ワールドへ行く'
   LORE:
     -  ''
-  ID: '351:14'
+  ID: orange dye
   POSITION-X: 4
   POSITION-Y: 2
 
@@ -108,7 +108,7 @@ worldinfo1:
     - '&6bouken'
     - '上級者ワールド。生活用。'
     - '慣れた人向けの、難しい設定。'
-    - '&d1.13'
+    - '&dworldaq'
     - '1.13ワールド'
   ID: paper
   KEEP-OPEN: true
@@ -125,7 +125,6 @@ jobsinfo:
     - '/jobs browse - ジョブ画面を開きます'
     - '/jobs stats - 現在の職業レベルを表示します'
     - '/jobs gtop - ランキングを表示します'
-    - '/jobs shop - ジョブ専用のショップ画面を開きます'
     - '/jobs points - 現在のポイント残高を表示します'
     - '/money - お金の残高を表示します'
   ID: paper
@@ -232,19 +231,7 @@ otherinfo:
   KEEP-OPEN: true
   POSITION-X: 9
   POSITION-Y: 4
-
-
-menu-citizen:
-  NAME: '&6citizen用追加メニュー'
-  COMMAND: 'open: citizen.yml'
-  ID: 322
-  LORE:
-    - 'citizen用のメニュー'
-    - '/cmenuでも開けます'
-  VIEW-PERMISSION: 'chestcommands.open.citizen.yml'
-  POSITION-X: 8
-  POSITION-Y: 1
-
+  
 
 menu-close-no-commands-no-lore:
   NAME: '&6Close the menu'

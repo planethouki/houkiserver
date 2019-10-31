@@ -10,11 +10,10 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
-    unavailable:
-        min: {x: -10000.0, y: 0.0, z: -10000.0}
-        max: {x: 10000.0, y: 255.0, z: 10000.0}
+    __global__:
         members: {}
-        flags: {passthrough: deny, passthrough-group: NON_MEMBERS}
+        flags: {other-explosion: deny, creeper-explosion: deny,
+            passthrough: deny}
         owners: {}
-        type: cuboid
-        priority: 1000
+        type: global
+        priority: 0

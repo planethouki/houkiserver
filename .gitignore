@@ -54,6 +54,7 @@
 /worldtt/
 /worldhub/
 /worldaq/
+/worldvi/
 
 # Other Folder #
 /crash-reports/
@@ -70,19 +71,12 @@
 !/plugins/Multiverse-SignPortals/
 
 !/plugins/dynmap/worlds.txt
-!/plugins/Dynmap-WorldGuard/
-
-!/plugins/TerrainControl/TerrainControl.ini
-!/plugins/TerrainControl/GlobalBiomes/
-!/plugins/TerrainControl/GlobalObjects/
-
-!/plugins/OpenTerrainGenerator/OTG.ini
-!/plugins/OpenTerrainGenerator/GlobalBiomes/
-!/plugins/OpenTerrainGenerator/GlobalObjects/
 
 !/plugins/WorldBorder/
-!/plugins/WorldEdit/
-!/plugins/WorldGuard/
+!/plugins/WorldEdit/config.yml
+
+!/plugins/WorldGuard/config.yml
+!/plugins/WorldGuard/worlds/
 
 !/plugins/Vault/
 !/plugins/Votifier/config.yml
@@ -90,10 +84,6 @@
 
 !/plugins/SimpleHomes/config.yml
 !/plugins/SimpleHomes/languages.yml
-
-!/plugins/ProtocolLib/config.yml
-
-!/plugins/PermissionsExTabColors/config.yml
 
 !/plugins/MinePacks/config.yml
 
@@ -122,13 +112,9 @@
 !/plugins/Jobs/shopItems.yml
 !/plugins/Jobs/titleConfig.yml
 
-!/plugins/iConomy/Template.yml
-
 !/plugins/HolographicDisplays/
 
 !/plugins/BetterChairs/
 !/plugins/BetterBeds/
-
-!/plugins/Backpacks/config.yml
 
 !/plugins/ChestCommands/

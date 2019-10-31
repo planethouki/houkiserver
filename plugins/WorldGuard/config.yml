@@ -56,7 +56,7 @@ summary-on-start: true
 op-permissions: true
 build-permission-nodes:
     enable: false
-    deny-message: '&eごめんね、それはできないことになってるんだ'
+    deny-message: '&eそれはできません'
 event-handling:
     block-entity-spawns-with-untraceable-cause: false
     interaction-whitelist: []
