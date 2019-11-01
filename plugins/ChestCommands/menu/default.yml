@@ -79,9 +79,18 @@ boukencmd:
   POSITION-X: 2
   POSITION-Y: 2
 
-shigencmd:
+umibecmd:
   COMMAND: 'mvtp worldaq'
-  NAME: '&d1.13ワールドへ行く'
+  NAME: '&d海辺ワールドへ行く'
+  LORE:
+    -  ''
+  ID: orange dye
+  POSITION-X: 3
+  POSITION-Y: 2
+
+tougecmd:
+  COMMAND: 'mvtp worldvi'
+  NAME: '&d山岳ワールドへ行く'
   LORE:
     -  ''
   ID: orange dye
@@ -108,8 +117,10 @@ worldinfo1:
     - '&6bouken'
     - '上級者ワールド。生活用。'
     - '慣れた人向けの、難しい設定。'
-    - '&dworldaq'
-    - '1.13ワールド'
+    - '&dumibe'
+    - '海辺のワールド'
+    - '&dtouge'
+    - '山岳ワールド'
   ID: paper
   KEEP-OPEN: true
   POSITION-X: 2
@@ -119,7 +130,7 @@ worldinfo1:
 jobsinfo:
   NAME: '&a職業について'
   LORE:
-    - '職業に就くと、お金とポイントが'
+    - '職業に就くと、ポイントが'
     - 'もらえるようになります'
     - 'なにはともあれ、何か職業に就いてみましょう'
     - '/jobs browse - ジョブ画面を開きます'
@@ -183,7 +194,6 @@ voteinfo:
   POSITION-Y: 3
 
 
-
 kissteleportinfo:
   NAME: '&aテレポートによる合流'
   LORE:
@@ -198,23 +208,10 @@ kissteleportinfo:
   POSITION-Y: 4
 
 
-roleinfo:
-  NAME: '&aロールについて'
-  LORE:
-    - 'Tabの色で現在のロールがわかります'
-    - '&fdefault - 初見さん用（白）'
-    - '&3people - 知り合いさん用（青）'
-    - '&2&lcitizen - 常連さん用（緑）'
-  ID: paper
-  KEEP-OPEN: true
-  POSITION-X: 2
-  POSITION-Y: 4
-
 backpackinfo:
   NAME: '&aバックパック'
   LORE:
     - 'もうひとつのインベントリ'
-    - 'ロールによって容量が異なります。'
     - '&3/bp &r開く'
   ID: paper
   KEEP-OPEN: true
