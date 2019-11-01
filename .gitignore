@@ -87,17 +87,9 @@
 
 !/plugins/MinePacks/config.yml
 
-!/plugins/mcMMOAction/
-!/plugins/mcMMO/advanced.yml
-!/plugins/mcMMO/child.yml
-!/plugins/mcMMO/config.yml
-!/plugins/mcMMO/experience.yml
-!/plugins/mcMMO/itemweights.yml
-!/plugins/mcMMO/potions.yml
-!/plugins/mcMMO/repair.vanilla.yml
-!/plugins/mcMMO/salvage.vanilla.yml
-!/plugins/mcMMO/treasures.yml
-!/plugins/mcMMO/upgrades.yml
+!/plugins/mcMMO/
+/plugins/mcMMO/flatfile/
+/plugins/mcMMO/backup/
 
 !/plugins/LockedItems/config.yml
 !/plugins/LockedItems/language.yml
