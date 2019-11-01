@@ -17,6 +17,8 @@ aliases:
   - version $1-
   renraku:
   - mv tp worldhub
+  touge:
+    - mv tp worldvi
   umibe:
   - mv tp worldaq
   bouken:
