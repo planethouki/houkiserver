@@ -153,7 +153,7 @@ Economy:
   # By disabling one of these, players no longer will get particular payment.
   # Useful for removing particular payment method without editing whole jobConfig file
   PaymentMethods:
-    Money: true
+    Money: false
     Points: true
     Exp: true
   # Can be used to change payment amounts for all jobs and all actions if you want to readjust them
