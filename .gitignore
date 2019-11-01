@@ -102,15 +102,7 @@
 !/plugins/LockedItems/config.yml
 !/plugins/LockedItems/language.yml
 
-!/plugins/Jobs/TranslatableWords
-!/plugins/Jobs/locale
-!/plugins/Jobs/Signs.yml
-!/plugins/Jobs/jobConfig.yml
-!/plugins/Jobs/restrictedAreas.yml
-!/plugins/Jobs/restrictedBlocks.yml
-!/plugins/Jobs/schedule.yml
-!/plugins/Jobs/shopItems.yml
-!/plugins/Jobs/titleConfig.yml
+!/plugins/Jobs/
 
 !/plugins/HolographicDisplays/
 
