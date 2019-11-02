@@ -8,7 +8,7 @@
 #  Settings for mcMMO in general
 ###
 General:
-    Locale: en_US
+    Locale: ja_JP
     MOTD_Enabled: true
     # Send a message to the player when his profile was successfully loaded
     Show_Profile_Loaded: false
