@@ -10,15 +10,15 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
-    spawn:
-        min: {x: -222.0, y: 0.0, z: -10.0}
-        max: {x: -159.0, y: 255.0, z: 53.0}
+    spawn_protected:
+        min: {x: -222, y: 0, z: -10}
+        max: {x: -159, y: 255, z: 53}
         members: {}
-        flags: {other-explosion: deny, water-flow: deny, enderman-grief: deny, pvp: deny,
-            mob-spawning: deny, block-place: deny, fire-spread: deny, water-flow-group: NON_OWNERS,
-            creeper-explosion: deny, mob-damage: deny, block-break: deny, passthrough: allow,
-            damage-animals: deny, block-place-group: NON_OWNERS, lava-flow: deny,
-            tnt: deny, block-break-group: NON_OWNERS}
+        flags: {other-explosion: deny, water-flow: deny, greeting: 保護領域に入りました, enderman-grief: deny,
+            pvp: deny, mob-spawning: deny, block-place: deny, fire-spread: deny, water-flow-group: NON_OWNERS,
+            creeper-explosion: deny, mob-damage: deny, passthrough: allow, block-break: deny,
+            damage-animals: deny, block-place-group: NON_OWNERS, tnt: deny, lava-flow: deny,
+            farewell: 保護領域から出ました, block-break-group: NON_OWNERS}
         owners: {}
         type: cuboid
         priority: 1000

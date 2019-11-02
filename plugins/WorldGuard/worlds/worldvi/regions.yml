@@ -10,11 +10,11 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
-  worldvi_spawn:
+  spawn_protected:
     min: {x: -10.0, y: 50.0, z: -10.0}
     max: {x: 10.0, y: 255.0, z: 10.0}
     members: {}
-    flags: {block-break: deny, block-place: deny}
+    flags: {block-break: deny, block-place: deny, greeting: '保護領域に入りました', farewell: '保護領域から出ました'}
     owners: {}
     type: cuboid
     priority: 0
