@@ -16,11 +16,8 @@ fire:
     disable-lava-fire-spread: true
     disable-all-fire-spread: true
 mobs:
-    block-creeper-explosions: true
     block-creeper-block-damage: true
-    block-wither-explosions: true
     block-wither-block-damage: true
-    block-wither-skull-explosions: true
     block-wither-skull-block-damage: true
     block-other-explosions: true
 player-damage:
