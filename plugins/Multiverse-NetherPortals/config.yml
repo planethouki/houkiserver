@@ -1,9 +1,0 @@
-bounceback: false
-worlds:
-  worldruin:
-    portalgoesto:
-      END: worldruin_the_end
-  worldti:
-    portalgoesto: {}
-  worldore:
-    portalgoesto: {}
