@@ -102,3 +102,8 @@
 !/plugins/BetterBeds/
 
 !/plugins/ChestCommands/
+
+
+
+node_modules
+.env
