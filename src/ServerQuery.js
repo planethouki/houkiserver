@@ -1,6 +1,9 @@
 import React from 'react';
 
 export default class ServerQuery extends React.Component {
+
+    title = (<h3>基本情報</h3>)
+
     constructor(props) {
         super(props);
         this.state = {
@@ -38,16 +41,17 @@ export default class ServerQuery extends React.Component {
     render() {
         const { error, isLoaded, data } = this.state;
         if (error) {
-            return <div>Error: {error.message}</div>;
+            return <div>{this.title}Error: {error.message}</div>;
         } else if (!isLoaded) {
-            return <div>Loading...</div>;
+            return <div>{this.title}Loading...</div>;
         } else {
             return (
-                <ul>
-                    <li>アドレス・・・houkiserver.com</li>
-                    <li>バージョン・・・<span id="version">{data.version.name}</span></li>
-                    <li>ユーザー・・・<span id="login-players">{data.players.online}</span>／<span id="max-players">{data.players.max}</span></li>
-                </ul>
+                <div>
+                    {this.title}
+                    <div>アドレス・・・houkiserver.com</div>
+                    <div>バージョン・・・<span id="version">{data.version.name}</span></div>
+                    <div>ユーザー・・・<span id="login-players">{data.players.online}</span>／<span id="max-players">{data.players.max}</span></div>
+                </div>
             );
         }
     }
