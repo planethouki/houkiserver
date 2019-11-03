@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import ServerQuery from './ServerQuery';
+import TopPlayers from './TopPlayers';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -15,7 +16,7 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
-const DYNMAP_URL = "https://houkiserver.z11.web.core.windows.net/dynmap/";
+const DYNMAP_URL = "https://houkiserver.com";
 
 const theme = createMuiTheme({
     typography: {
@@ -52,6 +53,10 @@ const styles = {
     },
     heroDescription: {
         marginTop: theme.spacing.unit * 4,
+        textAlign: 'center'
+    },
+    heroRanking: {
+        textAlign: 'center'
     },
     heroBanners: {
         marginTop: theme.spacing.unit * 4,
@@ -94,6 +99,9 @@ function App(props) {
                             </div>
                             <div className={classes.heroDescription}>
                                 <ServerQuery />
+                            </div>
+                            <div className={classes.heroRanking}>
+                                <TopPlayers />
                             </div>
                             <div className={classes.heroBanners}>
                                 <a href="https://minecraft.jp/servers/planethouki.ddns.net" target="_blank">
