@@ -1,8 +1,8 @@
 import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import './App.css';
 
-import ServerQuery from './ServerQuery';
-import TopPlayers from './TopPlayers';
+import Home from './components/Home';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -10,13 +10,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/styles';
 
 import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
-const DYNMAP_URL = "https://houkiserver.com";
 
 const theme = createMuiTheme({
     typography: {
@@ -79,38 +76,9 @@ function App(props) {
                         </Typography>
                     </Toolbar>
                 </AppBar>
-                <main>
-                    <div className={classes.heroUnit}>
-                        <div className={classes.heroContent}>
-                            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                                ほうき鯖
-                            </Typography>
-                            <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                                A Minecraft Server.
-                            </Typography>
-                            <div className={classes.heroButtons}>
-                                <Grid container spacing={10} justify="center">
-                                    <Grid item>
-                                        <Button variant="contained" color="primary" href={DYNMAP_URL} target="_blank">
-                                            dynmap
-                                        </Button>
-                                    </Grid>
-                                </Grid>
-                            </div>
-                            <div className={classes.heroDescription}>
-                                <ServerQuery />
-                            </div>
-                            <div className={classes.heroRanking}>
-                                <TopPlayers />
-                            </div>
-                            <div className={classes.heroBanners}>
-                                <a href="https://minecraft.jp/servers/planethouki.ddns.net" target="_blank" rel="noopener noreferrer">
-                                    <img src="https://minecraft.jp/servers/planethouki.ddns.net/banner/1/560x95.png" alt=""  className={classes.w100} />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+                <BrowserRouter>
+                    <Route exact path='/' render={() => (<Home classes={classes} />)} />
+                </BrowserRouter>
             </React.Fragment>
         </MuiThemeProvider>
     );
