@@ -45,21 +45,21 @@ const styles = {
     heroContent: {
         maxWidth: 600,
         margin: '0 auto',
-        padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`,
+        padding: `${theme.spacing(8)}px 0 ${theme.spacing(6)}px`,
     },
     heroButtons: {
-        padding: theme.spacing.unit,
-        marginTop: theme.spacing.unit * 4,
+        padding: theme.spacing(1),
+        marginTop: theme.spacing(4),
     },
     heroDescription: {
-        marginTop: theme.spacing.unit * 4,
+        marginTop: theme.spacing(4),
         textAlign: 'center'
     },
     heroRanking: {
         textAlign: 'center'
     },
     heroBanners: {
-        marginTop: theme.spacing.unit * 4,
+        marginTop: theme.spacing(4),
     },
     w100: {
         width: '100%',
@@ -89,7 +89,7 @@ function App(props) {
                                 A Minecraft Server.
                             </Typography>
                             <div className={classes.heroButtons}>
-                                <Grid container spacing={16} justify="center">
+                                <Grid container spacing={10} justify="center">
                                     <Grid item>
                                         <Button variant="contained" color="primary" href={DYNMAP_URL} target="_blank">
                                             dynmap
@@ -104,7 +104,7 @@ function App(props) {
                                 <TopPlayers />
                             </div>
                             <div className={classes.heroBanners}>
-                                <a href="https://minecraft.jp/servers/planethouki.ddns.net" target="_blank">
+                                <a href="https://minecraft.jp/servers/planethouki.ddns.net" target="_blank" rel="noopener noreferrer">
                                     <img src="https://minecraft.jp/servers/planethouki.ddns.net/banner/1/560x95.png" alt=""  className={classes.w100} />
                                 </a>
                             </div>
