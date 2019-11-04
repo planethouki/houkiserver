@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "./static/css/main.44abc40e.chunk.css",
-    "main.js": "./static/js/main.ea12f842.chunk.js",
-    "main.js.map": "./static/js/main.ea12f842.chunk.js.map",
-    "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
-    "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
-    "static/js/2.9813db8f.chunk.js": "./static/js/2.9813db8f.chunk.js",
-    "static/js/2.9813db8f.chunk.js.map": "./static/js/2.9813db8f.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.515317dab3747269e2315d30014816b0.js": "./precache-manifest.515317dab3747269e2315d30014816b0.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.44abc40e.chunk.css.map": "./static/css/main.44abc40e.chunk.css.map"
-  }
+    "main.css": "/houkiserver/static/css/main.44abc40e.chunk.css",
+    "main.js": "/houkiserver/static/js/main.c1712764.chunk.js",
+    "main.js.map": "/houkiserver/static/js/main.c1712764.chunk.js.map",
+    "runtime-main.js": "/houkiserver/static/js/runtime-main.45fa4770.js",
+    "runtime-main.js.map": "/houkiserver/static/js/runtime-main.45fa4770.js.map",
+    "static/js/2.ddcf57d6.chunk.js": "/houkiserver/static/js/2.ddcf57d6.chunk.js",
+    "static/js/2.ddcf57d6.chunk.js.map": "/houkiserver/static/js/2.ddcf57d6.chunk.js.map",
+    "index.html": "/houkiserver/index.html",
+    "precache-manifest.95b3eb848e99d046c99839a13ef2e36f.js": "/houkiserver/precache-manifest.95b3eb848e99d046c99839a13ef2e36f.js",
+    "service-worker.js": "/houkiserver/service-worker.js",
+    "static/css/main.44abc40e.chunk.css.map": "/houkiserver/static/css/main.44abc40e.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45fa4770.js",
+    "static/js/2.ddcf57d6.chunk.js",
+    "static/css/main.44abc40e.chunk.css",
+    "static/js/main.c1712764.chunk.js"
+  ]
 }
