@@ -23,14 +23,10 @@ export default class Home extends React.Component {
                     <Typography variant="h6" align="center" color="textSecondary" paragraph>
                         A Minecraft Server.
                     </Typography>
-                    <div className={classes.heroButtons}>
-                        <Grid container spacing={10} justify="center">
-                            <Grid item>
-                                <Button variant="contained" color="primary" href={DYNMAP_URL} target="_blank">
-                                    dynmap
-                                </Button>
-                            </Grid>
-                        </Grid>
+                    <div style={{textAlign: 'center'}}>
+                        <Button variant="contained" color="primary" href={DYNMAP_URL} target="_blank">
+                            dynmap
+                        </Button>
                     </div>
                     <div className={classes.heroDescription}>
                         <ServerQuery />
