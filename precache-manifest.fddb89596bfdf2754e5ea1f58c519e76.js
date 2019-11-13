@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2e952c6a0f0444d61fbedc19964e34f",
+    "revision": "bfeae08d38e373dd8ae694b296f9a40a",
     "url": "/houkiserver/index.html"
   },
   {
-    "revision": "9840d29cb5ccde808737",
+    "revision": "5b3919e0b917fe1ae75a",
     "url": "/houkiserver/static/css/main.44abc40e.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/houkiserver/static/js/2.a5feaefa.chunk.js"
   },
   {
-    "revision": "9840d29cb5ccde808737",
-    "url": "/houkiserver/static/js/main.ee1931e9.chunk.js"
+    "revision": "5b3919e0b917fe1ae75a",
+    "url": "/houkiserver/static/js/main.dd38a392.chunk.js"
   },
   {
     "revision": "750ed330fed98dfb05ad",
