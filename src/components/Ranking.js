@@ -130,7 +130,7 @@ export default class Ranking extends React.Component {
                         >
                             {
                                 Object.keys(mcmmo).map((key) => {
-                                    const keyRank = mcmmo[key].map((item, index) => {
+                                    const keyRank = mcmmo[key].slice(0, 10).map((item, index) => {
                                         return (
                                             <Box display="flex" justifyContent="space-between" key={item.playerName}>
                                                 <div>
@@ -214,7 +214,7 @@ export default class Ranking extends React.Component {
                                 <Card>
                                     <CardContent>
                                         {
-                                            jobs_point.map((item, index) => {
+                                            jobs_point.slice(0, 20).map((item, index) => {
                                                 return (
                                                     <Box display="flex" justifyContent="space-between" key={item.username}>
                                                         <div>
