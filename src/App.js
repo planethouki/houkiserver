@@ -67,7 +67,7 @@ function App(props) {
     return (
         <MuiThemeProvider theme={theme}>
             <React.Fragment>
-                <BrowserRouter>
+                <BrowserRouter basename="/houkiserver">
                     <CssBaseline />
                     <AppBar position="static" className={classes.appBar}>
                         <Toolbar className={classes.toolBar}>
