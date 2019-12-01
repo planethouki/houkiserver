@@ -3,7 +3,7 @@ import { Typography, Grid, Button } from '@material-ui/core';
 import ServerQuery from './ServerQuery';
 import TopPlayers from './TopPlayers';
 
-const DYNMAP_URL = "https://houkiserver.com";
+const DYNMAP_URL = "https://map.houkiserver.com";
 
 export default class Home extends React.Component {
 
