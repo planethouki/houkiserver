@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
+import { Box, Card, CardContent, Container, Grid, Typography } from '@material-ui/core';
 
 const cardGrid = {
     xs: 12,
@@ -113,13 +113,30 @@ export default class Ranking extends React.Component {
             mcmmo, jobs_rank, jobs_point
         } = this.state;
         if (error) {
-            return <div>{this.title_mcmmo}{this.title_jobs}Error: {error.message}</div>;
+            return <Container>{this.title_mcmmo}{this.title_jobs}Error: {error.message}</Container>;
         } else if (!isLoaded) {
-            return <div>{this.title_mcmmo}Loading...{this.title_jobs}Loading...</div>;
+            return (
+                <Container>
+                    <div style={{marginTop: '2rem'}}>
+                        <Typography component="h3" variant="h5" style={{marginTop: 10, marginBottom: 10}}>
+                            {this.title_mcmmo}
+                        </Typography>
+                        Loading...
+                        <Typography component="h3" variant="h5" style={{marginTop: 10, marginBottom: 10}}>
+                            {this.title_jobs_rank}
+                        </Typography>
+                        Loading...
+                        <Typography component="h3" variant="h5" style={{marginTop: 10, marginBottom: 10}}>
+                            {this.title_jobs_point}
+                        </Typography>
+                        Loading...
+                    </div>
+                </Container>
+            );
         } else {
             return (
-                <div>
-                    <div style={{padding: '20px'}}>
+                <Container>
+                    <div style={{marginTop: '2rem'}}>
                         <Typography component="h3" variant="h5" style={{marginTop: 10, marginBottom: 10}}>
                             {this.title_mcmmo}
                         </Typography>
@@ -163,7 +180,7 @@ export default class Ranking extends React.Component {
                             }
                         </Grid>
                     </div>
-                    <div style={{padding: '20px'}}>
+                    <div style={{marginTop: '2rem'}}>
                         <Typography component="h3" variant="h5" style={{marginTop: 10, marginBottom: 10}}>
                             {this.title_jobs_rank}
                         </Typography>
@@ -205,39 +222,37 @@ export default class Ranking extends React.Component {
                             }
                         </Grid>
                     </div>
-                    <div>
-                        <div style={{padding: 20}}>
-                            <Typography component="h3" variant="h5" style={{marginTop: 10, marginBottom: 10}}>
-                                {this.title_jobs_point}
-                            </Typography>
-                            <Grid {...cardGrid}>
-                                <Card>
-                                    <CardContent>
-                                        {
-                                            jobs_point.slice(0, 20).map((item, index) => {
-                                                return (
-                                                    <Box display="flex" justifyContent="space-between" key={item.username}>
-                                                        <div>
+                    <div style={{marginTop: '2rem'}}>
+                        <Typography component="h3" variant="h5" style={{marginTop: 10, marginBottom: 10}}>
+                            {this.title_jobs_point}
+                        </Typography>
+                        <Grid {...cardGrid}>
+                            <Card>
+                                <CardContent>
+                                    {
+                                        jobs_point.slice(0, 20).map((item, index) => {
+                                            return (
+                                                <Box display="flex" justifyContent="space-between" key={item.username}>
+                                                    <div>
                                                     <span style={{width: '2rem', display: 'inline-block', textAlign: 'center'}}>
                                                         {indexToIcon(index)}
                                                     </span>
-                                                            <span>
+                                                        <span>
                                                         {item.username}
                                                     </span>
-                                                        </div>
-                                                        <span style={{marginLeft: '5px', fontSize: '80%'}}>
+                                                    </div>
+                                                    <span style={{marginLeft: '5px', fontSize: '80%'}}>
                                                             {Math.floor(item.totalpoints)}
                                                         </span>
-                                                    </Box>
-                                                )
-                                            })
-                                        }
-                                    </CardContent>
-                                </Card>
-                            </Grid>
-                        </div>
+                                                </Box>
+                                            )
+                                        })
+                                    }
+                                </CardContent>
+                            </Card>
+                        </Grid>
                     </div>
-                </div>
+                </Container>
             );
         }
     }
