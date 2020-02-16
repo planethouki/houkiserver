@@ -4,13 +4,25 @@ import './App.css';
 
 import Home from './components/Home';
 import Ranking from './components/Ranking';
+import Contact from './components/Contact';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/styles';
 
-import { AppBar, Button, CssBaseline, Toolbar, Typography } from '@material-ui/core';
+import {
+    AppBar,
+    Button,
+    CssBaseline,
+    Drawer,
+    IconButton,
+    List,
+    ListItem,
+    Toolbar,
+    Typography
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 const theme = createMuiTheme({
@@ -36,6 +48,9 @@ const styles = {
     },
     toolBar: {
         justifyContent: 'space-between'
+    },
+    drawer: {
+        width: 300
     },
     heroUnit: {
         backgroundColor: theme.palette.background.paper,
@@ -64,27 +79,58 @@ const LinkTo = React.forwardRef((props, ref) => <RouterLink innerRef={ref} {...p
 
 function App(props) {
     const { classes } = props;
+    const [state, setState] = React.useState({
+        drawer: false
+    });
+    const toggleDrawer = (open) => event => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+        setState({ ...state, drawer: open });
+    };
     return (
         <MuiThemeProvider theme={theme}>
             <React.Fragment>
-                <BrowserRouter basename="/houkiserver">
+                <BrowserRouter basename="/">
                     <CssBaseline />
+                    <Drawer open={state.drawer} onClose={toggleDrawer(false)}>
+                        <div
+                            className={classes.drawer}
+                            onClick={toggleDrawer(false)}
+                            onKeyDown={toggleDrawer(false)}
+                        >
+                            <List>
+                                <ListItem button component={LinkTo} to="/">
+                                    ほうき鯖
+                                </ListItem>
+                                <ListItem button component={LinkTo} to="/ranking">
+                                    ランキング
+                                </ListItem>
+                                <ListItem button component={LinkTo} to="/contact">
+                                    お問い合わせ
+                                </ListItem>
+                            </List>
+                        </div>
+                    </Drawer>
                     <AppBar position="static" className={classes.appBar}>
                         <Toolbar className={classes.toolBar}>
-                            <Button component={LinkTo} to="/">
-                                <Typography variant="h6" color="inherit" noWrap>
-                                    ほうき鯖
-                                </Typography>
-                            </Button>
                             <div>
-                                <Button color="inherit" component={LinkTo} to="/ranking">
-                                    Ranking
+                                <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
+                                    <MenuIcon />
+                                </IconButton>
+                                <Button component={LinkTo} to="/">
+                                    <Typography variant="h6" color="inherit" noWrap>
+                                        ほうき鯖
+                                    </Typography>
                                 </Button>
+                            </div>
+                            <div>
                             </div>
                         </Toolbar>
                     </AppBar>
                     <Route exact path='/' render={() => (<Home classes={classes} />)} />
                     <Route exact path='/ranking' render={() => (<Ranking classes={classes} />)} />
+                    <Route exact path='/contact' render={() => (<Contact classes={classes} />)} />
                 </BrowserRouter>
             </React.Fragment>
         </MuiThemeProvider>
