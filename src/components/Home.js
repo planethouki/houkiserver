@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Button } from '@material-ui/core';
+import { Typography, Button } from '@material-ui/core';
 import ServerQuery from './ServerQuery';
 import TopPlayers from './TopPlayers';
 
