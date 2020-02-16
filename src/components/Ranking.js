@@ -12,11 +12,11 @@ const cardGrid = {
 function indexToIcon(index) {
     switch (index) {
         case 0:
-            return (<span>&#x1F947;</span>);
+            return (<span role="img" aria-label="1st place medal">&#x1F947;</span>);
         case 1:
-            return (<span>&#x1F948;</span>);
+            return (<span role="img" aria-label="2nd place medal">&#x1F948;</span>);
         case 2:
-            return (<span>&#x1F949;</span>);
+            return (<span role="img" aria-label="3rd place medal">&#x1F949;</span>);
         default:
             return (<span>{index + 1}</span>);
     }
