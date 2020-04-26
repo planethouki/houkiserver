@@ -1,5 +1,5 @@
 <template>
-  <div class="container mb-5">
+  <div id="page-index" class="container mb-5">
     <section class="text-center">
       <div class="display-3">
         ほうき鯖
