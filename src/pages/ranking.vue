@@ -161,16 +161,7 @@ export default {
     return {
       mcmmo: [],
       jobsRank: [],
-      jobsPoint: [],
-      totalLevelPlayers: [],
-      totalLevelValues: [],
-      totalPointPlayers: [],
-      totalPointValues: [],
-      totalSetting: [
-        { index: 0, icon: '&#x1F947;', fontSize: '150%' },
-        { index: 1, icon: '&#x1F948;', fontSize: '110%' },
-        { index: 2, icon: '&#x1F949;', fontSize: '100%' }
-      ]
+      jobsPoint: []
     }
   },
   mounted () {
