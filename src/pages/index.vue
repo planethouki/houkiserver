@@ -26,7 +26,7 @@
       <div class="d-flex justify-content-center">
         <div class="text-center px-2">
           <h6>McMMO合計レベル</h6>
-          <div v-for="(item, index) in totalMcMmoLevel">
+          <div v-for="(item, index) in totalMcMmoLevel" :key="index">
             <span v-html="totalSetting[index].icon" />
             <span :style="{ fontSize: totalSetting[index].fontSize }" class="font-weight-bold">
               {{ item.playerName }}
@@ -36,7 +36,7 @@
         </div>
         <div class="text-center px-2">
           <h6>Jobs総合ポイント</h6>
-          <div v-for="(item, index) in totalJobsPoint">
+          <div v-for="(item, index) in totalJobsPoint" :key="index">
             <span v-html="totalSetting[index].icon" />
             <span :style="{ fontSize: totalSetting[index].fontSize }" class="font-weight-bold">
               {{ item.username }}
@@ -53,7 +53,7 @@
       <div class="d-flex justify-content-center">
         <div class="text-center px-2">
           <h6>McMMO合計レベル</h6>
-          <div v-for="record in totalIncreaseLevelRecords">
+          <div v-for="record in totalIncreaseLevelRecords" :key="record.playerName">
             <span class="font-weight-bold">
               {{ record.playerName }}
             </span>
@@ -62,7 +62,7 @@
         </div>
         <div class="text-center px-2">
           <h6>Jobs総合ポイント</h6>
-          <div v-for="record in totalIncreasePointRecords">
+          <div v-for="record in totalIncreasePointRecords" :key="record.username">
             <span class="font-weight-bold">
               {{ record.username }}
             </span>
