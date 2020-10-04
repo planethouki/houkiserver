@@ -82,6 +82,11 @@
         <img src="https://minecraft.jp/servers/planethouki.ddns.net/banner/1/560x95.png" alt="">
       </a>
     </section>
+    <section class="text-center">
+      <nuxt-link to="policy">
+        プライバシーポリシー
+      </nuxt-link>
+    </section>
   </div>
 </template>
 
