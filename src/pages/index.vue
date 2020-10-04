@@ -59,6 +59,9 @@
             </span>
             <small>(+{{ record.increaseLevel }})</small>
           </div>
+          <div v-if="totalIncreaseLevelRecords.length === 0">
+            データなし
+          </div>
         </div>
         <div class="text-center px-2">
           <h6>Jobs総合ポイント</h6>
@@ -67,6 +70,9 @@
               {{ record.username }}
             </span>
             <small>(+{{ record.increasePoints }})</small>
+          </div>
+          <div v-if="totalIncreaseLevelRecords.length === 0">
+            データなし
           </div>
         </div>
       </div>
