@@ -4,6 +4,8 @@
 
 ## Build Setup
 
+`.env.sample`を参考にして、`.env`ファイルを作成してください。
+
 ``` bash
 # install dependencies
 $ npm run install
