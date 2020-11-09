@@ -34,7 +34,7 @@
             <small>({{ item.level }})</small>
           </div>
         </div>
-        <div class="text-center px-2">
+        <div class="text-center px-2 d-none">
           <h6>Jobs総合ポイント</h6>
           <div v-for="(item, index) in totalJobsPoint" :key="index">
             <span v-html="totalSetting[index].icon" />
@@ -63,7 +63,7 @@
             データなし
           </div>
         </div>
-        <div class="text-center px-2">
+        <div class="text-center px-2 d-none">
           <h6>Jobs総合ポイント</h6>
           <div v-for="record in totalIncreasePointRecords" :key="record.username">
             <span class="font-weight-bold">
@@ -77,15 +77,34 @@
         </div>
       </div>
     </section>
-    <section class="text-center">
-      <a href="https://minecraft.jp/servers/planethouki.ddns.net" target="_blank" rel="noopener noreferrer">
-        <img src="https://minecraft.jp/servers/planethouki.ddns.net/banner/1/560x95.png" alt="">
-      </a>
-    </section>
-    <section class="text-center">
-      <nuxt-link to="policy">
-        プライバシーポリシー
-      </nuxt-link>
+    <section class="d-flex flex-column">
+      <div class="text-center">
+        <a href="https://minecraft.jp/servers/planethouki.ddns.net" target="_blank" rel="noopener noreferrer">
+          <img
+            src="https://minecraft.jp/servers/planethouki.ddns.net/banner/1/560x95.png"
+            alt="minecraft.jp"
+            style="max-width: 100%;"
+          >
+        </a>
+      </div>
+      <div class="mt-3 text-center">
+        <a
+          href="https://ja.namemc.com/server/houkiserver.com"
+          rel="noreferrer"
+          target="_blank"
+        >
+          namemc.com
+        </a>
+      </div>
+      <div class="mt-3 text-center">
+        <a
+          href="https://minecraft-statistic.net/en/server/13.114.36.139_25565.html"
+          rel="noreferrer"
+          target="_blank"
+        >
+          minecraft-statistic.net
+        </a>
+      </div>
     </section>
   </div>
 </template>
