@@ -15,6 +15,9 @@
           <b-nav-item to="/rules">
             ルール
           </b-nav-item>
+          <b-nav-item to="/howto">
+            ハウツー
+          </b-nav-item>
         </b-navbar-nav>
 
         <b-navbar-nav class="ml-auto">
@@ -31,6 +34,9 @@
           <div class="d-flex flex-column" style="min-width: 10rem;">
             <nuxt-link to="rules">
               ルール
+            </nuxt-link>
+            <nuxt-link to="howto">
+              ハウツー
             </nuxt-link>
             <nuxt-link to="ranking">
               ランキング

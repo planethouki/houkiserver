@@ -4,12 +4,17 @@
       <div class="h3">
         ルール
       </div>
-      <div v-for="m in menu" :key="m.key" class="mt-5">
-        <div class="h5">
-          {{ m.title }}
+      <template v-if="menu == null">
+        <b-spinner></b-spinner>
+      </template>
+      <template v-else>
+        <div v-for="m in menu" :key="m.key" class="mt-5">
+          <div class="h5">
+            {{ m.title }}
+          </div>
+          <div style="white-space: pre-line;">{{ m.body }}</div>
         </div>
-        <div style="white-space: pre-line;">{{ m.body }}</div>
-      </div>
+      </template>
     </section>
   </div>
 </template>
@@ -18,7 +23,7 @@
 export default {
   data () {
     return {
-      menu: {}
+      menu: null
     }
   },
   mounted () {
@@ -27,7 +32,9 @@ export default {
     ])
       .then(responses => Promise.all(responses.map(res => res.json())))
       .then(([menu]) => {
-        this.menu = menu
+        setTimeout(() => {
+          this.menu = menu
+        }, 3000)
       })
   }
 }
