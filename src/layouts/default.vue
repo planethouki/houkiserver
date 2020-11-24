@@ -25,34 +25,32 @@
       </b-collapse>
     </b-navbar>
     <nuxt />
-    <div class="bg-secondary">
-      <div class="p-3">
-        <div class="d-flex flex-row small">
-          <div class="d-flex flex-column" style="min-width: 8rem;">
-            <h5>ほうき鯖</h5>
-          </div>
-          <div class="d-flex flex-column" style="min-width: 10rem;">
-            <nuxt-link to="rules">
-              ルール
-            </nuxt-link>
-            <nuxt-link to="howto">
-              ハウツー
-            </nuxt-link>
-            <nuxt-link to="ranking">
-              ランキング
-            </nuxt-link>
-            <nuxt-link to="policy">
-              プライバシーポリシー
-            </nuxt-link>
-          </div>
-          <div class="d-flex flex-column" style="min-width: 200px;">
-            <a href="https://map.houkiserver.com" target="_blank">
-              Dynmap
-            </a>
-            <a href="https://minecraft.jp/servers/houkiserver.com" target="_blank">
-              minecraft.jp
-            </a>
-          </div>
+    <div class="bg-secondary pt-3">
+      <div class="d-flex flex-column flex-sm-row small px-3">
+        <div class="d-flex flex-column" style="min-width: 8rem;">
+          <h5>ほうき鯖</h5>
+        </div>
+        <div class="d-flex flex-column pb-3" style="min-width: 10rem;">
+          <nuxt-link to="rules">
+            ルール
+          </nuxt-link>
+          <nuxt-link to="howto">
+            ハウツー
+          </nuxt-link>
+          <nuxt-link to="ranking">
+            ランキング
+          </nuxt-link>
+          <nuxt-link to="policy">
+            プライバシーポリシー
+          </nuxt-link>
+        </div>
+        <div class="d-flex flex-column pb-3" style="min-width: 8rem;">
+          <a href="https://map.houkiserver.com" target="_blank">
+            Dynmap
+          </a>
+          <a href="https://minecraft.jp/servers/houkiserver.com" target="_blank">
+            minecraft.jp
+          </a>
         </div>
       </div>
     </div>

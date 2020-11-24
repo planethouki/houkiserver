@@ -5,42 +5,12 @@
         McMMOレベルランキング
       </div>
       <b-row>
-        <b-col
-          v-for="item in mcmmo"
-          :key="item.title"
-          cols="12"
-          sm="6"
-          md="4"
-          lg="3"
-          class="py-2 px-2"
-        >
-          <b-card
-            :title="item.title"
-            body-class="p-3"
-            title-tag="h6"
-          >
-            <b-card-text>
-              <div v-for="r in item.rank" :key="r.player" class="d-flex justify-content-between">
-                <div style="font-size: 80%;">
-                  <span v-html="r.icon" class="d-inline-block text-center" style="width: 2rem;" />
-                  <span>{{ r.player }}</span>
-                </div>
-                <div style="font-size: 70%;">
-                  <span>{{ r.level }}</span>
-                </div>
-              </div>
-            </b-card-text>
-          </b-card>
+        <b-col v-if="mcmmo === null">
+          <b-spinner></b-spinner>
         </b-col>
-      </b-row>
-    </section>
-    <section>
-      <div class="h3">
-        Jobsポイントランキング
-      </div>
-      <b-row>
         <b-col
-          v-for="item in jobsRank"
+          v-else
+          v-for="item in mcmmo"
           :key="item.title"
           cols="12"
           sm="6"
@@ -73,7 +43,49 @@
         Jobsレベルランキング
       </div>
       <b-row>
+        <b-col v-if="jobsRank === null">
+          <b-spinner></b-spinner>
+        </b-col>
         <b-col
+          v-else
+          v-for="item in jobsRank"
+          :key="item.title"
+          cols="12"
+          sm="6"
+          md="4"
+          lg="3"
+          class="py-2 px-2"
+        >
+          <b-card
+            :title="item.title"
+            body-class="p-3"
+            title-tag="h6"
+          >
+            <b-card-text>
+              <div v-for="r in item.rank" :key="r.player" class="d-flex justify-content-between">
+                <div style="font-size: 80%;">
+                  <span v-html="r.icon" class="d-inline-block text-center" style="width: 2rem;" />
+                  <span>{{ r.player }}</span>
+                </div>
+                <div style="font-size: 70%;">
+                  <span>{{ r.level }}</span>
+                </div>
+              </div>
+            </b-card-text>
+          </b-card>
+        </b-col>
+      </b-row>
+    </section>
+    <section>
+      <div class="h3">
+        Jobsポイントランキング
+      </div>
+      <b-row>
+        <b-col v-if="jobsPoint === null">
+          <b-spinner></b-spinner>
+        </b-col>
+        <b-col
+          v-else
           cols="12"
           sm="6"
           md="4"
@@ -159,17 +171,25 @@ export default {
   components: {},
   data () {
     return {
-      mcmmo: [],
-      jobsRank: [],
-      jobsPoint: []
+      mcmmo: null,
+      jobsRank: null,
+      jobsPoint: null
     }
   },
   mounted () {
-    Promise.all([
-      fetch('https://houkiserverstats.z31.web.core.windows.net/mcmmo.json'),
-      fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_point.json'),
-      fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_rank.json')
-    ])
+    Promise.resolve()
+      .then(() => {
+        return new Promise((resolve) => {
+          setTimeout(resolve, 0)
+        })
+      })
+      .then(() => {
+        return Promise.all([
+          fetch('https://houkiserverstats.z31.web.core.windows.net/mcmmo.json'),
+          fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_point.json'),
+          fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_rank.json')
+        ])
+      })
       .then(responses => Promise.all(responses.map(res => res.json())))
       .then(([mcmmo, jobsPoint, jobsRank]) => {
         this.mcmmo = Object.keys(mcmmo).map((key) => {

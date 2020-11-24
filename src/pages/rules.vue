@@ -34,7 +34,7 @@ export default {
       .then(([menu]) => {
         setTimeout(() => {
           this.menu = menu
-        }, 3000)
+        }, 0)
       })
   }
 }
