@@ -8,15 +8,17 @@
         <div class="h5">
           Grief Prevention
         </div>
-        <div>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/videoseries?list=PLKkXcIN2QHPJC8_BgTbnf2qa0EbWlzzib"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
+        <div class="position-relative" style="max-width: 560px;">
+          <div class="screen">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/videoseries?list=PLKkXcIN2QHPJC8_BgTbnf2qa0EbWlzzib"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
         </div>
       </section>
     </section>
@@ -26,3 +28,20 @@
 <script>
 export default {}
 </script>
+
+<style scoped>
+.screen {
+  position: relative;
+  height: 0;
+  padding-bottom: calc(100% * 9 / 16);
+  overflow: hidden;
+}
+
+.screen iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>

@@ -6,11 +6,11 @@
       </div>
       <b-row>
         <b-col v-if="mcmmo === null">
-          <b-spinner></b-spinner>
+          <b-spinner />
         </b-col>
         <b-col
-          v-else
           v-for="item in mcmmo"
+          v-else
           :key="item.title"
           cols="12"
           sm="6"
@@ -26,7 +26,7 @@
             <b-card-text>
               <div v-for="r in item.rank" :key="r.player" class="d-flex justify-content-between">
                 <div style="font-size: 80%;">
-                  <span v-html="r.icon" class="d-inline-block text-center" style="width: 2rem;" />
+                  <span class="d-inline-block text-center" style="width: 2rem;" v-html="r.icon" />
                   <span>{{ r.player }}</span>
                 </div>
                 <div style="font-size: 70%;">
@@ -44,11 +44,11 @@
       </div>
       <b-row>
         <b-col v-if="jobsRank === null">
-          <b-spinner></b-spinner>
+          <b-spinner />
         </b-col>
         <b-col
-          v-else
           v-for="item in jobsRank"
+          v-else
           :key="item.title"
           cols="12"
           sm="6"
@@ -64,7 +64,7 @@
             <b-card-text>
               <div v-for="r in item.rank" :key="r.player" class="d-flex justify-content-between">
                 <div style="font-size: 80%;">
-                  <span v-html="r.icon" class="d-inline-block text-center" style="width: 2rem;" />
+                  <span class="d-inline-block text-center" style="width: 2rem;" v-html="r.icon" />
                   <span>{{ r.player }}</span>
                 </div>
                 <div style="font-size: 70%;">
@@ -82,7 +82,7 @@
       </div>
       <b-row>
         <b-col v-if="jobsPoint === null">
-          <b-spinner></b-spinner>
+          <b-spinner />
         </b-col>
         <b-col
           v-else
@@ -99,7 +99,7 @@
             <b-card-text>
               <div v-for="r in jobsPoint" :key="r.player" class="d-flex justify-content-between">
                 <div style="font-size: 80%;">
-                  <span v-html="r.icon" class="d-inline-block text-center" style="width: 2rem;" />
+                  <span class="d-inline-block text-center" style="width: 2rem;" v-html="r.icon" />
                   <span>{{ r.player }}</span>
                 </div>
                 <div style="font-size: 70%;">

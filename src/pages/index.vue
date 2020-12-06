@@ -131,11 +131,11 @@ export default {
     }
   },
   mounted () {
-    fetch('https://houkiserverquery.azurewebsites.net/')
+    fetch('https://houikiserver-query.azurewebsites.net/api/status')
       .then(res => res.json())
       .then((data) => {
-        this.version = data.version.name
-        this.player = `${data.players.online} / ${data.players.max}`
+        this.version = data.version
+        this.player = `${data.onlinePlayers} / ${data.maxPlayers}`
       })
 
     Promise.all([
