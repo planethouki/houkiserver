@@ -6,7 +6,7 @@
       </div>
       <section>
         <div class="h5">
-          Grief Prevention
+          領地保護
         </div>
         <div class="position-relative" style="max-width: 560px;">
           <div class="screen">
@@ -14,6 +14,23 @@
               width="560"
               height="315"
               src="https://www.youtube.com/embed/videoseries?list=PLKkXcIN2QHPJC8_BgTbnf2qa0EbWlzzib"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="h5">
+          保護チェスト
+        </div>
+        <div class="position-relative" style="max-width: 560px;">
+          <div class="screen">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/O6GsuNKixes"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
