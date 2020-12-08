@@ -18,6 +18,9 @@
           <b-nav-item to="/howto">
             ハウツー
           </b-nav-item>
+          <b-nav-item to="/dynmap">
+            Dynmap
+          </b-nav-item>
         </b-navbar-nav>
 
         <b-navbar-nav class="ml-auto">

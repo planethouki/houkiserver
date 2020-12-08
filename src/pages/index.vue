@@ -127,16 +127,21 @@ export default {
         { index: 2, icon: '&#x1F949;', fontSize: '100%' }
       ],
       totalIncreasePointRecords: [],
-      totalIncreaseLevelRecords: []
+      totalIncreaseLevelRecords: [],
+      fetchStatusInterval: null
     }
   },
   mounted () {
-    fetch('https://houikiserver-query.azurewebsites.net/api/status')
-      .then(res => res.json())
-      .then((data) => {
-        this.version = data.version
-        this.player = `${data.onlinePlayers} / ${data.maxPlayers}`
-      })
+    const fetchStatus = () => {
+      fetch('https://houikiserver-query.azurewebsites.net/api/status')
+        .then(res => res.json())
+        .then((data) => {
+          this.version = data.version
+          this.player = `${data.onlinePlayers} / ${data.maxPlayers}`
+        })
+    }
+    this.fetchStatusInterval = setInterval(fetchStatus, 10000)
+    fetchStatus()
 
     Promise.all([
       fetch('https://houkiserverstats.z31.web.core.windows.net/mcmmo.json'),
@@ -189,6 +194,11 @@ export default {
           return b.increaseLevel - a.increaseLevel
         })
       })
+  },
+  destroyed () {
+    if (this.fetchStatusInterval !== null) {
+      clearInterval(this.fetchStatusInterval)
+    }
   }
 }
 </script>
