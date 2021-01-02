@@ -9,11 +9,6 @@
       </div>
     </section>
     <section class="text-center">
-      <b-button href="https://map.houkiserver.com" target="_blank" size="lg">
-        Dynmap
-      </b-button>
-    </section>
-    <section class="text-center">
       <h3>基本情報</h3>
       <div>アドレス・・・{{ address }}</div>
       <div>バージョン・・・{{ version }}</div>
@@ -77,6 +72,17 @@
         </div>
       </div>
     </section>
+    <section class="text-center">
+      <h3>
+        コンタクト
+      </h3>
+      <div>
+        <a :href="discord" target="_blank" rel="noreferrer">Discord</a>
+      </div>
+      <div>
+        <a href="https://twitter.com/planethouki" target="_blank" rel="noreferrer">Twitter</a>
+      </div>
+    </section>
     <section class="d-flex flex-column">
       <div class="text-center">
         <a href="https://minecraft.jp/servers/planethouki.ddns.net" target="_blank" rel="noopener noreferrer">
@@ -93,16 +99,25 @@
           rel="noreferrer"
           target="_blank"
         >
-          namemc.com
+          namemc.com&#x2197;
         </a>
       </div>
-      <div class="mt-3 text-center">
+      <div class="mt-1 text-center">
         <a
-          href="https://minecraft-statistic.net/en/server/13.114.36.139_25565.html"
+          href="https://gservers.org/minecraft-servers/houkiserver.com:25565/"
           rel="noreferrer"
           target="_blank"
         >
-          minecraft-statistic.net
+          gservers.org&#x2197;
+        </a>
+      </div>
+      <div class="mt-1 text-center">
+        <a
+          href="https://mclist.co/server/houkiserver.com:25565/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          mclist.co&#x2197;
         </a>
       </div>
     </section>
@@ -129,6 +144,11 @@ export default {
       totalIncreasePointRecords: [],
       totalIncreaseLevelRecords: [],
       fetchStatusInterval: null
+    }
+  },
+  computed: {
+    discord () {
+      return process.env.DISCORD_INVITE_LINK
     }
   },
   mounted () {

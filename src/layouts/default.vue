@@ -49,10 +49,10 @@
         </div>
         <div class="d-flex flex-column pb-3" style="min-width: 8rem;">
           <a href="https://map.houkiserver.com" target="_blank">
-            Dynmap
+            Dynmap&#x2197;
           </a>
           <a href="https://minecraft.jp/servers/houkiserver.com" target="_blank">
-            minecraft.jp
+            minecraft.jp&#x2197;
           </a>
         </div>
       </div>

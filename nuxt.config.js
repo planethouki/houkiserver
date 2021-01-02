@@ -70,5 +70,9 @@ export default {
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false
+  },
+
+  env: {
+    DISCORD_INVITE_LINK: process.env.DISCORD_INVITE_LINK
   }
 }
