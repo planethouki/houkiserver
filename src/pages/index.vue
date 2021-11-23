@@ -9,6 +9,14 @@
       </div>
     </section>
     <section class="text-center">
+      <div class="h3">
+        ほうき鯖終了のお知らせ
+      </div>
+      <p>
+        ほうき鯖は、2021年12月31日をもって運用終了いたします。
+      </p>
+    </section>
+    <section class="text-center">
       <h3>基本情報</h3>
       <div>アドレス・・・{{ address }}</div>
       <div>バージョン・・・{{ version }}</div>
