@@ -18,9 +18,6 @@
           <b-nav-item to="/howto">
             ハウツー
           </b-nav-item>
-          <b-nav-item to="/dynmap">
-            Dynmap
-          </b-nav-item>
         </b-navbar-nav>
 
         <b-navbar-nav class="ml-auto">
@@ -46,14 +43,6 @@
           <nuxt-link to="policy">
             プライバシーポリシー
           </nuxt-link>
-        </div>
-        <div class="d-flex flex-column pb-3" style="min-width: 8rem;">
-          <a href="https://map.houkiserver.com" target="_blank">
-            Dynmap&#x2197;
-          </a>
-          <a href="https://minecraft.jp/servers/houkiserver.com" target="_blank">
-            minecraft.jp&#x2197;
-          </a>
         </div>
       </div>
     </div>
