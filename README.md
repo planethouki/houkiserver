@@ -13,6 +13,9 @@ $ npm run install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
+# node 18
+$ NODE_OPTIONS='--openssl-legacy-provider' npm run dev
+
 # build for production and launch server
 $ npm run build
 $ npm run start
