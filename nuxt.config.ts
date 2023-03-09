@@ -11,5 +11,11 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+
+  runtimeConfig: {
+    public: {
+      discordInviteLink: process.env.DISCORD_INVITE_LINK
+    }
   }
 })
