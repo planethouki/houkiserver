@@ -122,3 +122,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+section {
+  margin-bottom: 2rem;
+}
+</style>
