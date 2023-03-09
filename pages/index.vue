@@ -16,6 +16,16 @@
         ほうき鯖は、2021年12月31日をもって運用終了しましたが、この度、2023年2月10日に再開しました。
       </p>
     </section>
+    <section class="text-center">
+      <h3>
+        プレイヤー
+      </h3>
+      <div>
+        <span>{{ onlinePlayerCount }}</span
+        ><span> / </span
+        ><span>{{ maxPlayerCount }}</span>
+      </div>
+    </section>
     <section>
       <h3 class="text-center">
         総合ランキング
@@ -74,7 +84,9 @@ export default {
       totalIncreasePointRecords: [],
       totalIncreaseLevelRecords: [],
       fetchStatusInterval: null,
-      discord: config.public.discordInviteLink
+      discord: config.public.discordInviteLink,
+      onlinePlayerCount: 0,
+      maxPlayerCount: 0,
     }
   },
   mounted () {
@@ -97,6 +109,11 @@ export default {
           }
         })
       })
+
+    $fetch('/api/serverStatus').then((status) => {
+      this.onlinePlayerCount = status.players.online
+      this.maxPlayerCount = status.players.max
+    })
   },
   destroyed () {
     if (this.fetchStatusInterval !== null) {
