@@ -123,7 +123,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 section {
   margin-bottom: 2rem;
 }
