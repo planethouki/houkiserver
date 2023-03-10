@@ -174,12 +174,11 @@ export default {
       })
       .then(() => {
         return Promise.all([
-          fetch('/api/serverStats/mcmmo'),
-          fetch('/api/serverStats/jobsPoint'),
-          fetch('/api/serverStats/jobsRank')
+          $fetch('/api/serverStats/mcmmo'),
+          $fetch('/api/serverStats/jobsPoint'),
+          $fetch('/api/serverStats/jobsRank')
         ])
       })
-      .then(responses => Promise.all(responses.map(res => res.json())))
       .then(([mcmmo, jobsPoint, jobsRank]) => {
         this.mcmmo = Object.keys(mcmmo).map((key) => {
           return {

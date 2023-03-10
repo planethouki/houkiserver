@@ -30,9 +30,8 @@ export default {
   },
   mounted () {
     Promise.all([
-      fetch('/api/serverStats/menu')
+      $fetch('/api/serverStats/menu')
     ])
-      .then(responses => Promise.all(responses.map(res => res.json())))
       .then(([menu]) => {
         setTimeout(() => {
           this.menu = menu
