@@ -67,60 +67,50 @@
   </div>
 </template>
 
-<script>
+<script setup>
 
-export default {
-  components: {},
-  data () {
-    const config = useRuntimeConfig()
-    return {
-      totalMcMmoLevel: [],
-      totalJobsPoint: [],
-      totalSetting: [
-        { index: 0, icon: '&#x1F947;', fontSize: '150%' },
-        { index: 1, icon: '&#x1F948;', fontSize: '110%' },
-        { index: 2, icon: '&#x1F949;', fontSize: '100%' }
-      ],
-      totalIncreasePointRecords: [],
-      totalIncreaseLevelRecords: [],
-      fetchStatusInterval: null,
-      discord: config.public.discordInviteLink,
-      onlinePlayerCount: 0,
-      maxPlayerCount: 0,
-    }
-  },
-  mounted () {
-    Promise.all([
-      fetch('https://houkiserverstats.z31.web.core.windows.net/mcmmo.json'),
-      fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_point.json')
-    ])
-      .then(responses => Promise.all(responses.map(res => res.json())))
-      .then(([mcmmo, jobs]) => {
-        this.totalMcMmoLevel = [0, 1, 2].map((index) => {
-          return {
-            playerName: mcmmo.totalLevel[index].playerName,
-            level: mcmmo.totalLevel[index].level
-          }
-        })
-        this.totalJobsPoint = [0, 1, 2].map((index) => {
-          return {
-            username: jobs[index].username,
-            totalpoints: Math.floor(jobs[index].totalpoints)
-          }
-        })
-      })
+const config = useRuntimeConfig()
 
-    $fetch('/api/serverStatus').then((status) => {
-      this.onlinePlayerCount = status.players.online
-      this.maxPlayerCount = status.players.max
+const discord = config.public.discordInviteLink
+const totalSetting = [
+  { index: 0, icon: '&#x1F947;', fontSize: '150%' },
+  { index: 1, icon: '&#x1F948;', fontSize: '110%' },
+  { index: 2, icon: '&#x1F949;', fontSize: '100%' }
+]
+
+const onlinePlayerCount = ref(0)
+const maxPlayerCount = ref(0)
+
+const totalMcMmoLevel = reactive([])
+const totalJobsPoint = reactive([])
+
+const fetchStatusInterval = ref(0)
+
+onMounted(() => {
+  Promise.all([
+    $fetch('https://houkiserverstats.z31.web.core.windows.net/mcmmo.json'),
+    $fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_point.json')
+  ])
+    .then(([mcmmo, jobs]) => {
+      [0, 1, 2].forEach((index) => {
+        totalMcMmoLevel.push({
+          playerName: mcmmo.totalLevel[index].playerName,
+          level: mcmmo.totalLevel[index].level
+        })
+      });
+      [0, 1, 2].forEach((index) => {
+        totalJobsPoint.push({
+          username: jobs[index].username,
+          totalpoints: Math.floor(jobs[index].totalpoints)
+        })
+      });
     })
-  },
-  destroyed () {
-    if (this.fetchStatusInterval !== null) {
-      clearInterval(this.fetchStatusInterval)
-    }
-  }
-}
+
+  $fetch('/api/serverStatus').then((status) => {
+    onlinePlayerCount.value = status.players.online
+    maxPlayerCount.value = status.players.max
+  })
+})
 </script>
 
 <style scoped lang="scss">
