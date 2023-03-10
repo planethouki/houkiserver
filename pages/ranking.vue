@@ -103,7 +103,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 function mcMmoTypeToName (type) {
   switch (type.toLowerCase()) {
     case 'acrobatics':
@@ -156,62 +156,67 @@ function indexToIcon (index) {
   }
 }
 
-export default {
-  components: {},
-  data () {
-    return {
-      mcmmo: null,
-      jobsRank: null,
-      jobsPoint: null
-    }
-  },
-  mounted () {
-    Promise.resolve()
-      .then(() => {
-        return new Promise((resolve) => {
-          setTimeout(resolve, 0)
-        })
+const mcmmo = reactive([])
+const jobsRank = reactive([])
+const jobsPoint = reactive([])
+
+
+Promise.all([
+  $fetch('/api/serverStats/mcmmo'),
+  $fetch('/api/serverStats/jobsPoint'),
+  $fetch('/api/serverStats/jobsRank')
+])
+  .then(([mcmmoRes, jobsPointRes, jobsRankRes]) => {
+
+    Object
+      .keys(mcmmoRes)
+      .map((key) => {
+        return {
+          title: mcMmoTypeToName(key),
+          rank: mcmmoRes[key].slice(0, 10).map((item, index) => {
+            return {
+              icon: indexToIcon(index),
+              player: item.playerName,
+              level: item.level
+            }
+          })
+        }
       })
-      .then(() => {
-        return Promise.all([
-          $fetch('/api/serverStats/mcmmo'),
-          $fetch('/api/serverStats/jobsPoint'),
-          $fetch('/api/serverStats/jobsRank')
-        ])
+      .forEach((item) => {
+        mcmmo.push(item)
       })
-      .then(([mcmmo, jobsPoint, jobsRank]) => {
-        this.mcmmo = Object.keys(mcmmo).map((key) => {
-          return {
-            title: mcMmoTypeToName(key),
-            rank: mcmmo[key].slice(0, 10).map((item, index) => {
-              return {
-                icon: indexToIcon(index),
-                player: item.playerName,
-                level: item.level
-              }
-            })
-          }
-        })
-        this.jobsRank = Object.keys(jobsRank).map((key) => {
-          return {
-            title: key,
-            rank: jobsRank[key].slice(0, 10).map((item, index) => {
-              return {
-                icon: indexToIcon(index),
-                player: item.username,
-                level: item.level
-              }
-            })
-          }
-        })
-        this.jobsPoint = jobsPoint.slice(0, 20).map((item, index) => {
-          return {
-            icon: indexToIcon(index),
-            player: item.username,
-            level: Math.floor(item.totalpoints)
-          }
-        })
+
+
+    Object
+      .keys(jobsRankRes)
+      .map((key) => {
+        return {
+          title: key,
+          rank: jobsRankRes[key].slice(0, 10).map((item, index) => {
+            return {
+              icon: indexToIcon(index),
+              player: item.username,
+              level: item.level
+            }
+          })
+        }
       })
-  }
-}
+      .forEach((item) => {
+        jobsRank.push(item)
+      })
+
+    jobsPointRes
+      .slice(0, 20)
+      .map((item, index) => {
+        return {
+          icon: indexToIcon(index),
+          player: item.username,
+          level: Math.floor(item.totalpoints)
+        }
+      })
+      .forEach((item) => {
+        jobsPoint.push(item)
+      })
+  })
+
 </script>
