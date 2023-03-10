@@ -7,7 +7,7 @@
             ほうき鯖
           </nuxt-link>
 
-          <div class="" id="navbarSupportedContent">
+          <div class="navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <nuxt-link class="nav-link active" aria-current="page" to="/ranking">ランキング</nuxt-link>
