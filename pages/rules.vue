@@ -21,22 +21,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      menu: null
-    }
-  },
-  mounted () {
-    Promise.all([
-      $fetch('/api/serverStats/menu')
-    ])
-      .then(([menu]) => {
-        setTimeout(() => {
-          this.menu = menu
-        }, 0)
-      })
-  }
-}
+<script setup>
+
+const menu = reactive([])
+
+$fetch('/api/serverStats/menu')
+  .then((menuRes) => {
+    menuRes.forEach((item) => {
+      menu.push(item)
+    })
+  })
+
 </script>
