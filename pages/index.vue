@@ -88,8 +88,8 @@ const fetchStatusInterval = ref(0)
 
 onMounted(() => {
   Promise.all([
-    $fetch('https://houkiserverstats.z31.web.core.windows.net/mcmmo.json'),
-    $fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_point.json')
+    $fetch('/api/serverStats/mcmmo'),
+    $fetch('/api/serverStats/jobsPoint'),
   ])
     .then(([mcmmo, jobs]) => {
       [0, 1, 2].forEach((index) => {

@@ -174,9 +174,9 @@ export default {
       })
       .then(() => {
         return Promise.all([
-          fetch('https://houkiserverstats.z31.web.core.windows.net/mcmmo.json'),
-          fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_point.json'),
-          fetch('https://houkiserverstats.z31.web.core.windows.net/jobs_rank.json')
+          fetch('/api/serverStats/mcmmo'),
+          fetch('/api/serverStats/jobsPoint'),
+          fetch('/api/serverStats/jobsRank')
         ])
       })
       .then(responses => Promise.all(responses.map(res => res.json())))

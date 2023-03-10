@@ -30,7 +30,7 @@ export default {
   },
   mounted () {
     Promise.all([
-      fetch('https://houkiserverstats.z31.web.core.windows.net/menu.json')
+      fetch('/api/serverStats/menu')
     ])
       .then(responses => Promise.all(responses.map(res => res.json())))
       .then(([menu]) => {
