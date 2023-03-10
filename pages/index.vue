@@ -106,9 +106,12 @@ onMounted(() => {
       });
     })
 
-  $fetch('/api/serverStatus').then((status) => {
-    onlinePlayerCount.value = status.players.online
-    maxPlayerCount.value = status.players.max
+  $fetch('/api/serverStatus').then((statusResponse) => {
+    if (statusResponse.isServerOnline) {
+      const status = statusResponse.result
+      onlinePlayerCount.value = status.players.online
+      maxPlayerCount.value = status.players.max
+    }
   })
 })
 </script>
