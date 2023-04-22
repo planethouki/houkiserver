@@ -21,6 +21,14 @@
     </section>
     <section class="text-center">
       <h3>
+        接続
+      </h3>
+      <div>
+        houkiserver.com
+      </div>
+    </section>
+    <section class="text-center">
+      <h3>
         プレイヤー
       </h3>
       <div>
