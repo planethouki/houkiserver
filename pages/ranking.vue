@@ -5,7 +5,7 @@
         McMMOレベルランキング
       </div>
       <div class="row">
-        <div class="col" v-if="mcmmo === null">
+        <div class="col" v-if="mcmmo.length === 0">
           <div class="spinner-border" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
@@ -28,7 +28,7 @@
         Jobsレベルランキング
       </div>
       <div class="row">
-        <div class="col" v-if="jobsRank === null">
+        <div class="col" v-if="jobsRank.length === 0">
           <div class="spinner-border" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
@@ -51,7 +51,7 @@
         Jobsポイントランキング
       </div>
       <div class="row">
-        <div class="col" v-if="jobsPoint === null">
+        <div class="col" v-if="jobsPoint.length === 0">
           <div class="spinner-border" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
