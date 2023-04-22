@@ -10,29 +10,17 @@
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-        <div
+        <template
           v-for="item in mcmmo"
           v-else
           :key="item.title"
-          class="col col-12 col-sm-6 col-md-4 col-lg-3 py-2 px-2"
         >
-          <div class="card p-3">
-            <h6 class="card-title">
-              {{ item.title }}
-            </h6>
-            <div class="card-text">
-              <div v-for="r in item.rank" :key="r.player" class="d-flex justify-content-between">
-                <div style="font-size: 80%;">
-                  <span class="d-inline-block text-center" style="width: 2rem;" v-html="r.icon" />
-                  <span>{{ r.player }}</span>
-                </div>
-                <div style="font-size: 70%;">
-                  <span>{{ r.level }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <RankingCard :title="item.title">
+            <template v-for="r in item.rank" :key="r.player">
+              <RankingItem :player-name="r.player" :level="r.level" :icon="r.icon" />
+            </template>
+          </RankingCard>
+        </template>
       </div>
     </section>
     <section>
@@ -45,29 +33,17 @@
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-        <div
+        <template
           v-for="item in jobsRank"
           v-else
           :key="item.title"
-          class="col col-12 col-sm-6 col-md-4 col-lg-3 py-2 px-2"
         >
-          <div class="card p-3">
-            <h6 class="card-title">
-              {{ item.title }}
-            </h6>
-            <div class="card-text">
-              <div v-for="r in item.rank" :key="r.player" class="d-flex justify-content-between">
-                <div style="font-size: 80%;">
-                  <span class="d-inline-block text-center" style="width: 2rem;" v-html="r.icon" />
-                  <span>{{ r.player }}</span>
-                </div>
-                <div style="font-size: 70%;">
-                  <span>{{ r.level }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <RankingCard :title="item.title">
+            <template v-for="r in item.rank" :key="r.player">
+              <RankingItem :player-name="r.player" :level="r.level" :icon="r.icon" />
+            </template>
+          </RankingCard>
+        </template>
       </div>
     </section>
     <section>
@@ -80,24 +56,13 @@
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-        <div
-          v-else
-          class="col col-12 col-sm-6 col-md-4 col-lg-3 py-2 px-2"
-        >
-          <div class="card p-3">
-            <div class="card-text">
-              <div v-for="r in jobsPoint" :key="r.player" class="d-flex justify-content-between">
-                <div style="font-size: 80%;">
-                  <span class="d-inline-block text-center" style="width: 2rem;" v-html="r.icon" />
-                  <span>{{ r.player }}</span>
-                </div>
-                <div style="font-size: 70%;">
-                  <span>{{ r.level }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <template v-else>
+          <RankingCard>
+            <template v-for="r in jobsPoint" :key="r.player">
+              <RankingItem :player-name="r.player" :level="r.level" :icon="r.icon" />
+            </template>
+          </RankingCard>
+        </template>
       </div>
     </section>
   </div>
