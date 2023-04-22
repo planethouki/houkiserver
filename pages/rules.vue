@@ -10,12 +10,9 @@
         </div>
       </template>
       <template v-else>
-        <div v-for="m in menu" :key="m.key" class="mt-5">
-          <div class="h5">
-            {{ m.title }}
-          </div>
-          <div style="white-space: pre-line;">{{ m.body }}</div>
-        </div>
+        <template v-for="m in menu" :key="m.key">
+          <RulesCard :title="m.title" :body="m.body" />
+        </template>
       </template>
     </section>
   </div>
