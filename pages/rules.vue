@@ -4,7 +4,7 @@
       <div class="h3">
         ルール
       </div>
-      <template v-if="menu == null">
+      <template v-if="menu.length === 0">
         <div class="spinner-border" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
