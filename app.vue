@@ -23,7 +23,7 @@
         </div>
       </nav>
 
-      <NuxtPage/>
+      <NuxtPage class="pt-3" />
 
     </NuxtLayout>
   </div>
