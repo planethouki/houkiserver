@@ -96,9 +96,6 @@ const totalSetting = [
   { index: 2, icon: '&#x1F949;', fontSize: '100%' }
 ]
 
-const onlinePlayerCount = ref(0)
-const maxPlayerCount = ref(0)
-
 const totalMcMmoLevel = reactive([])
 const totalJobsPoint = reactive([])
 
