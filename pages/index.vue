@@ -5,7 +5,7 @@
         ほうき鯖
       </h1>
       <div>
-        接続アドレス
+        サーバーアドレス
       </div>
       <div class="display-4">
         houkiserver.com
