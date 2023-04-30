@@ -7,8 +7,17 @@
       <div>
         サーバーアドレス
       </div>
-      <div class="display-4">
+      <div class="display-4 mb-4">
         houkiserver.com
+      </div>
+      <div>
+        サーバーステータス
+      </div>
+      <div v-if="serverStatusLoading" class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div v-else class="display-4">
+        {{ serverStatus.isServerOnline ? 'オンライン' : 'オフライン' }}
       </div>
     </section>
     <section class="text-center">
@@ -92,6 +101,11 @@ const totalJobsPoint = reactive([])
 
 const fetchStatusInterval = ref(0)
 
+const serverStatusLoading = ref(true)
+const serverStatus = reactive({
+  isServerOnline: false,
+})
+
 onMounted(() => {
   Promise.all([
     $fetch('/api/serverStats/mcmmo'),
@@ -113,6 +127,8 @@ onMounted(() => {
     })
 
   $fetch('/api/serverStatus').then((statusResponse) => {
+    serverStatusLoading.value = false
+    serverStatus.isServerOnline = statusResponse.isServerOnline
     if (statusResponse.isServerOnline) {
       const status = statusResponse.result
       onlinePlayerCount.value = status.players.online
