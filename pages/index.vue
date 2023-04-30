@@ -1,11 +1,14 @@
 <template>
   <div id="page-index" class="container mb-5">
     <section class="text-center">
-      <div class="display-3">
+      <h1 class="display-3 mb-4">
         ほうき鯖
+      </h1>
+      <div>
+        接続アドレス
       </div>
       <div class="display-4">
-        A Minecraft Server.
+        houkiserver.com
       </div>
     </section>
     <section class="text-center">
@@ -18,14 +21,6 @@
       <p>
         サーバー運用の費用を抑えるため、当面の間は<strong class="h4">17時から23時</strong>までの起動です。
       </p>
-    </section>
-    <section class="text-center">
-      <h3>
-        接続
-      </h3>
-      <div>
-        houkiserver.com
-      </div>
     </section>
     <section class="text-center">
       <h3>
