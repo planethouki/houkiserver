@@ -33,12 +33,15 @@
     </section>
     <section class="text-center">
       <h3>
-        プレイヤー
+        プレイヤー数
       </h3>
-      <div>
-        <span>{{ onlinePlayerCount }}</span
+      <div v-if="serverStatusLoading" class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div v-else>
+        <span>{{ serverStatus.onlinePlayerCount }}</span
         ><span> / </span
-        ><span>{{ maxPlayerCount }}</span>
+        ><span>{{ serverStatus.maxPlayerCount }}</span>
       </div>
     </section>
     <section>
@@ -104,6 +107,8 @@ const fetchStatusInterval = ref(0)
 const serverStatusLoading = ref(true)
 const serverStatus = reactive({
   isServerOnline: false,
+  onlinePlayerCount: 0,
+  maxPlayerCount: 0,
 })
 
 onMounted(() => {
@@ -131,8 +136,8 @@ onMounted(() => {
     serverStatus.isServerOnline = statusResponse.isServerOnline
     if (statusResponse.isServerOnline) {
       const status = statusResponse.result
-      onlinePlayerCount.value = status.players.online
-      maxPlayerCount.value = status.players.max
+      serverStatus.onlinePlayerCount = status.players.online
+      serverStatus.maxPlayerCount = status.players.max
     }
   })
 })
