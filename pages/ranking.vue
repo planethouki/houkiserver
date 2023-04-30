@@ -74,14 +74,8 @@ const mcmmo = reactive([])
 const jobsRank = reactive([])
 const jobsPoint = reactive([])
 
-
-Promise.all([
-  $fetch('/api/serverStats/mcmmo'),
-  $fetch('/api/serverStats/jobsPoint'),
-  $fetch('/api/serverStats/jobsRank')
-])
-  .then(([mcmmoRes, jobsPointRes, jobsRankRes]) => {
-
+$fetch('/api/serverStats/mcmmo')
+  .then((mcmmoRes) => {
     Object
       .keys(mcmmoRes)
       .map((key) => {
@@ -99,8 +93,26 @@ Promise.all([
       .forEach((item) => {
         mcmmo.push(item)
       })
+  })
 
+$fetch('/api/serverStats/jobsPoint')
+  .then((jobsPointRes) => {
+    jobsPointRes
+      .slice(0, 20)
+      .map((item, index) => {
+        return {
+          icon: indexToIcon(index),
+          player: item.username,
+          level: Math.floor(item.totalpoints)
+        }
+      })
+      .forEach((item) => {
+        jobsPoint.push(item)
+      })
+  })
 
+$fetch('/api/serverStats/jobsRank')
+  .then((jobsRankRes) => {
     Object
       .keys(jobsRankRes)
       .map((key) => {
@@ -117,19 +129,6 @@ Promise.all([
       })
       .forEach((item) => {
         jobsRank.push(item)
-      })
-
-    jobsPointRes
-      .slice(0, 20)
-      .map((item, index) => {
-        return {
-          icon: indexToIcon(index),
-          player: item.username,
-          level: Math.floor(item.totalpoints)
-        }
-      })
-      .forEach((item) => {
-        jobsPoint.push(item)
       })
   })
 
