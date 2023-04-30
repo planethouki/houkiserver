@@ -19,7 +19,7 @@
                 <nuxt-link class="nav-link active" aria-current="page" to="/howto">ハウツー</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link class="nav-link active" aria-current="maps" to="/maps">マップ</nuxt-link>
+                <nuxt-link class="nav-link active" aria-current="page" to="/maps">マップ</nuxt-link>
               </li>
             </ul>
           </div>
