@@ -44,33 +44,6 @@
         ><span>{{ serverStatus.maxPlayerCount }}</span>
       </div>
     </section>
-    <section>
-      <h3 class="text-center">
-        総合ランキング
-      </h3>
-      <div class="d-flex justify-content-center">
-        <div class="text-center px-2">
-          <h6>McMMO合計レベル</h6>
-          <div v-for="(item, index) in totalMcMmoLevel" :key="index">
-            <span v-html="totalSetting[index].icon" />
-            <span :style="{ fontSize: totalSetting[index].fontSize }" class="font-weight-bold">
-              {{ item.playerName }}
-            </span>
-            <small>({{ item.level }})</small>
-          </div>
-        </div>
-        <div class="text-center px-2 d-none">
-          <h6>Jobs総合ポイント</h6>
-          <div v-for="(item, index) in totalJobsPoint" :key="index">
-            <span v-html="totalSetting[index].icon" />
-            <span :style="{ fontSize: totalSetting[index].fontSize }" class="font-weight-bold">
-              {{ item.username }}
-            </span>
-            <small>({{ item.totalpoints }})</small>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="text-center">
       <h3>
         コンタクト
@@ -90,14 +63,6 @@
 const config = useRuntimeConfig()
 
 const discord = config.public.discordInviteLink
-const totalSetting = [
-  { index: 0, icon: '&#x1F947;', fontSize: '150%' },
-  { index: 1, icon: '&#x1F948;', fontSize: '110%' },
-  { index: 2, icon: '&#x1F949;', fontSize: '100%' }
-]
-
-const totalMcMmoLevel = reactive([])
-const totalJobsPoint = reactive([])
 
 const fetchStatusInterval = ref(0)
 
@@ -109,25 +74,6 @@ const serverStatus = reactive({
 })
 
 onMounted(() => {
-  Promise.all([
-    $fetch('/api/serverStats/mcmmo'),
-    $fetch('/api/serverStats/jobsPoint'),
-  ])
-    .then(([mcmmo, jobs]) => {
-      [0, 1, 2].forEach((index) => {
-        totalMcMmoLevel.push({
-          playerName: mcmmo.totalLevel[index].playerName,
-          level: mcmmo.totalLevel[index].level
-        })
-      });
-      [0, 1, 2].forEach((index) => {
-        totalJobsPoint.push({
-          username: jobs[index].username,
-          totalpoints: Math.floor(jobs[index].totalpoints)
-        })
-      });
-    })
-
   $fetch('/api/serverStatus').then((statusResponse) => {
     serverStatusLoading.value = false
     serverStatus.isServerOnline = statusResponse.isServerOnline
