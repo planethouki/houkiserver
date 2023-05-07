@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      title: 'ほうき鯖',
       link: [
         {
           rel: 'stylesheet',
