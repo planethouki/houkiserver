@@ -12,7 +12,7 @@
       <iframe
         width="560"
         height="315"
-        src="https://map.houkiserver.com/20230227-unmined/"></iframe>
+        src="https://map.houkiserver.com/20230508-worldti/"></iframe>
     </div>
   </section>
 </template>
