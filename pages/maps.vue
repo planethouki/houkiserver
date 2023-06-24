@@ -5,7 +5,7 @@
       <iframe
         width="560"
         height="315"
-        src="https://map.houkiserver.com/20230423-worldss/"></iframe>
+        src="https://map.houkiserver.com/20230624-worldss/"></iframe>
     </div>
     <h1>kaitaku</h1>
     <div class="screen">
