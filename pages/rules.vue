@@ -1,18 +1,39 @@
 <template>
   <div class="container mb-5">
     <section>
-      <div class="h3">
-        ルール
-      </div>
       <template v-if="menu.length === 0">
+        <div class="h3">
+          ルール
+        </div>
         <div class="spinner-border" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
       </template>
       <template v-else>
-        <template v-for="m in menu" :key="m.key">
-          <RulesCard :title="m.title" :body="m.body" />
-        </template>
+        <div class="h3">
+          ルール
+        </div>
+        <div class="row mb-4">
+          <template v-for="m in menu.ruleInfo" :key="m.key">
+            <RulesCard :title="m.title" :body="m.body" />
+          </template>
+        </div>
+        <div class="h3">
+          ワールドコマンド
+        </div>
+        <div class="row mb-4">
+          <template v-for="m in menu.commands" :key="m.key">
+            <RulesCard :title="m.title" :body="m.body" />
+          </template>
+        </div>
+        <div class="h3">
+          情報
+        </div>
+        <div class="row mb-4">
+          <template v-for="m in menu.otherInfo" :key="m.key">
+            <RulesCard :title="m.title" :body="m.body" />
+          </template>
+        </div>
       </template>
     </section>
 
@@ -24,16 +45,19 @@
       <div v-if="shopItems.length === 0" class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
-      <div v-else>
-        <div v-for="item in shopItems" :key="item.name" class="mb-3">
-          <h4 class="h4">{{ item.name }}</h4>
-          <div>価格</div>
-          <div>{{ item.price }} Jobsポイント</div>
-          <div>内容</div>
-          <template v-for="giveItem in item.giveItems" :key="giveItem.id">
-            <div>{{ giveItem.id }} {{ giveItem.amount }}個</div>
-          </template>
-        </div>
+      <div v-else class="row">
+        <template v-for="item in shopItems" :key="item.name">
+          <JobsShopCard :title="item.name">
+            <h6 class="mb-1">価格</h6>
+            <p class="mb-2">{{ item.price }} Jobsポイント</p>
+            <h6 class="mb-1">内容</h6>
+            <div>
+              <template v-for="giveItem in item.giveItems" :key="giveItem.id">
+                <div>{{ giveItem.id }} {{ giveItem.amount }}個</div>
+              </template>
+            </div>
+          </JobsShopCard>
+        </template>
       </div>
     </section>
 
@@ -64,12 +88,22 @@
 
 <script setup>
 
-const menu = reactive([])
+const menu = reactive({
+  ruleInfo: [],
+  commands: [],
+  otherInfo: [],
+})
 
 $fetch('/api/serverStats/menu')
   .then((menuRes) => {
     menuRes.forEach((item) => {
-      menu.push(item)
+      if (item.key === "ruleinfo") {
+        menu.ruleInfo.push(item)
+      } else if (item.key.endsWith("cmd")) {
+        menu.commands.push(item)
+      } else {
+        menu.otherInfo.push(item)
+      }
     })
   })
 

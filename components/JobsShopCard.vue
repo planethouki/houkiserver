@@ -5,7 +5,7 @@
         {{ title }}
       </div>
       <div class="card-text" style="white-space: pre-line;">
-        {{ body }}
+        <slot></slot>
       </div>
     </div>
   </div>
@@ -14,7 +14,6 @@
 <script setup lang="ts">
 defineProps<{
   title: string,
-  body: string,
 }>()
 </script>
 
