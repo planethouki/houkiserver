@@ -4,20 +4,35 @@
       <h1 class="display-3 mb-4">
         ほうき鯖
       </h1>
-      <div>
-        サーバーアドレス
+      <div class="mb-4">
+        <div>
+          サーバーアドレス
+        </div>
+        <div class="display-4">
+          houkiserver.com
+        </div>
       </div>
-      <div class="display-4 mb-4">
-        houkiserver.com
+      <div class="mb-4">
+        <div>
+          バージョン
+        </div>
+        <div v-if="serverStatusLoading" class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div v-else>
+          {{ serverStatus.version }}
+        </div>
       </div>
-      <div>
-        サーバーステータス
-      </div>
-      <div v-if="serverStatusLoading" class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-      <div v-else class="display-4">
-        {{ serverStatus.isServerOnline ? 'オンライン' : 'オフライン' }}
+      <div class="mb-4">
+        <div>
+          サーバーステータス
+        </div>
+        <div v-if="serverStatusLoading" class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div v-else class="display-4 mb-4">
+          {{ serverStatus.isServerOnline ? 'オンライン' : 'オフライン' }}
+        </div>
       </div>
     </section>
     <section class="text-center">
@@ -71,6 +86,7 @@ const serverStatus = reactive({
   isServerOnline: false,
   onlinePlayerCount: 0,
   maxPlayerCount: 0,
+  version: 'loading...',
 })
 
 onMounted(() => {
@@ -81,6 +97,7 @@ onMounted(() => {
       const status = statusResponse.result
       serverStatus.onlinePlayerCount = status.players.online
       serverStatus.maxPlayerCount = status.players.max
+      serverStatus.version = status.version.name.replace('Spigot', 'Minecraft')
     }
   })
 })
