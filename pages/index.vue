@@ -36,14 +36,6 @@
       </div>
     </section>
     <section class="text-center">
-      <div class="h3">
-        ほうき鯖再開のお知らせ
-      </div>
-      <p>
-        ほうき鯖は、2021年12月31日をもって運用終了しましたが、この度、2023年2月10日に再開しました。
-      </p>
-    </section>
-    <section class="text-center">
       <h3>
         プレイヤー数
       </h3>
