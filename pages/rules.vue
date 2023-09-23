@@ -75,6 +75,14 @@
 
     <section style="margin-top: 5rem;">
       <div class="h3">
+        renraku商人
+      </div>
+      <p>renrakuワールドにはアイテム商人がいます。エメラルドとアイテムを交換してくれます。</p>
+      <p>主にマインクラフト内で個数が限られるアイテムを販売しています。</p>
+    </section>
+
+    <section style="margin-top: 5rem;">
+      <div class="h3">
         ハウツー
       </div>
       <section>
