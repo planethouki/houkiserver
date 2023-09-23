@@ -1,9 +1,21 @@
 <template>
   <div class="container mb-5">
     <section>
-      <template v-if="menu.length === 0">
+      <template v-if="menu.ruleInfo.length === 0">
         <div class="h3">
           ルール
+        </div>
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="h3">
+          ワールドコマンド
+        </div>
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="h3">
+          情報
         </div>
         <div class="spinner-border" role="status">
           <span class="visually-hidden">Loading...</span>
