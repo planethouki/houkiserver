@@ -68,7 +68,7 @@ const config = useRuntimeConfig()
 
 const discord = config.public.discordInviteLink
 
-const fetchStatusInterval = ref(0)
+let fetchStatusInterval
 
 const serverStatusLoading = ref(true)
 const serverStatus = reactive({
@@ -79,17 +79,27 @@ const serverStatus = reactive({
 })
 
 onMounted(() => {
-  $fetch('/api/serverStatus').then((statusResponse) => {
-    serverStatusLoading.value = false
-    serverStatus.isServerOnline = statusResponse.isServerOnline
-    if (statusResponse.isServerOnline) {
-      const status = statusResponse.result
-      serverStatus.onlinePlayerCount = status.players.online
-      serverStatus.maxPlayerCount = status.players.max
-      serverStatus.version = status.version.name.replace('Spigot', 'Minecraft')
-    }
-  })
+  fetchServerStatus()
+  fetchStatusInterval = setInterval(fetchServerStatus, 10000)
 })
+
+onUnmounted(() => {
+  clearInterval(fetchStatusInterval)
+})
+
+async function fetchServerStatus() {
+  return $fetch('/api/serverStatus', { signal: AbortSignal.timeout(4000) })
+    .then((statusResponse) => {
+      serverStatusLoading.value = false
+      serverStatus.isServerOnline = statusResponse.isServerOnline
+      if (statusResponse.isServerOnline) {
+        const status = statusResponse.result
+        serverStatus.onlinePlayerCount = status.players.online
+        serverStatus.maxPlayerCount = status.players.max
+        serverStatus.version = status.version.name.replace('Spigot', 'Minecraft')
+      }
+    })
+}
 </script>
 
 <style scoped lang="scss">
