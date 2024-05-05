@@ -5,21 +5,21 @@
       <iframe
         width="560"
         height="315"
-        src="https://map.houkiserver.com/240427-worldss/"></iframe>
+        src="https://map.houkiserver.com/20240427-worldss/"></iframe>
     </div>
     <h1>kaitaku</h1>
     <div class="screen">
       <iframe
         width="560"
         height="315"
-        src="https://map.houkiserver.com/240427-worldti/"></iframe>
+        src="https://map.houkiserver.com/20240427-worldti/"></iframe>
     </div>
     <h1>bouken</h1>
     <div class="screen">
       <iframe
         width="560"
         height="315"
-        src="https://map.houkiserver.com/240427-worldbb/"></iframe>
+        src="https://map.houkiserver.com/20240427-worldbb/"></iframe>
     </div>
   </section>
 </template>
