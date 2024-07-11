@@ -9,7 +9,7 @@
           サーバーアドレス
         </div>
         <div class="display-4">
-          houkiserver.com
+          mc.houkiserver.com
         </div>
       </div>
       <div class="mb-4">
