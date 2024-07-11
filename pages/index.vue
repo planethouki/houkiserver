@@ -97,6 +97,10 @@ async function fetchServerStatus() {
         serverStatus.onlinePlayerCount = status.players.online
         serverStatus.maxPlayerCount = status.players.max
         serverStatus.version = status.version.name.replace('Spigot', 'Minecraft')
+      } else {
+        serverStatus.onlinePlayerCount = 0
+        serverStatus.maxPlayerCount = 0
+        serverStatus.version = 'unknown'
       }
     })
 }
