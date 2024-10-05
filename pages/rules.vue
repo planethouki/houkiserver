@@ -51,30 +51,6 @@
 
     <section style="margin-top: 5rem;">
       <div class="h3">
-        Jobsショップ内容
-      </div>
-      <p>/jobs shop で購入メニューが開きます。</p>
-      <div v-if="shopItems.length === 0" class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-      <div v-else class="row">
-        <template v-for="item in shopItems" :key="item.name">
-          <JobsShopCard :title="item.name">
-            <h6 class="mb-1">価格</h6>
-            <p class="mb-2">{{ item.price }} Jobsポイント</p>
-            <h6 class="mb-1">内容</h6>
-            <div>
-              <template v-for="giveItem in item.giveItems" :key="giveItem.id">
-                <div>{{ giveItem.id }} {{ giveItem.amount }}個</div>
-              </template>
-            </div>
-          </JobsShopCard>
-        </template>
-      </div>
-    </section>
-
-    <section style="margin-top: 5rem;">
-      <div class="h3">
         kaitaku商人
       </div>
       <p>kaitakuワールドのスポーン地点にはアイテム商人がいます。エメラルドとアイテムを交換してくれます。</p>
