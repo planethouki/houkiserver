@@ -75,9 +75,9 @@
 
     <section style="margin-top: 5rem;">
       <div class="h3">
-        renraku商人
+        kaitaku商人
       </div>
-      <p>renrakuワールドにはアイテム商人がいます。エメラルドとアイテムを交換してくれます。</p>
+      <p>kaitakuワールドのスポーン地点にはアイテム商人がいます。エメラルドとアイテムを交換してくれます。</p>
       <p>主にマインクラフト内で個数が限られるアイテムを販売しています。</p>
     </section>
 
