@@ -1,4 +1,4 @@
-import { ServerStatus } from "./serverStatus";
+import { ServerStatus } from "./ServerStatus";
 
 export interface ServerStatusResponse {
   isServerOnline: boolean,
