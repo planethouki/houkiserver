@@ -59,6 +59,14 @@
         <a href="https://twitter.com/planethouki" target="_blank" rel="noreferrer">Twitter</a>
       </div>
     </section>
+    <section class="text-center">
+      <h3>
+        解説
+      </h3>
+      <div>
+        <a :href="youtube" target="_blank" rel="noreferrer">YouTube</a>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -67,6 +75,7 @@
 const config = useRuntimeConfig()
 
 const discord = config.public.discordInviteLink
+const youtube = config.public.youtubePlaylistLink
 
 let fetchStatusInterval
 

@@ -16,7 +16,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      discordInviteLink: process.env.DISCORD_INVITE_LINK
+      discordInviteLink: process.env.DISCORD_INVITE_LINK,
+      youtubePlaylistLink: process.env.YOUTUBE_PLAYLIST_LINK,
     }
   }
 })
